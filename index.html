@@ -1,789 +1,357 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bluebox IP</title>
-    <link rel="stylesheet" href="bluestyles.css">
-    <link rel="shortcut icon" href="https://i.postimg.cc/9fqYVvxh/logo.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bluebox IP - Infraestrutura de TI</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; color: #222; background-color: #f4f4f4; line-height: 1.6; }
+    header { background-color: #002244; color: #fff; padding: 1px 0; }
+    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; padding: 0 20px; }
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #ffaa00; }
+
+    .hero { position: relative; background: url('https://ipworks.com.pt/wp-content/uploads/2014/04/banner.jpg') no-repeat center center fixed;
+    color: #fff; text-align: center; height: 100vh; overflow: hidden; }
+    #particles-js { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
+    .hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 0 20px; }
+    .hero-content h1 { font-size: 2.8rem; margin-bottom: 20px; animation: fadeInDown 1s ease; }
+    .hero-content p { font-size: 1.3rem; margin-bottom: 30px; animation: fadeInUp 1s ease; }
+    .hero-content button { background-color: #ffaa00; border: none; padding: 15px 30px; font-size: 1rem; cursor: pointer; border-radius: 5px; transition: background 0.3s; animation: fadeInUp 1.2s ease; }
+    .hero-content button:hover { background-color: #e69900; }
+
+    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px);} to { opacity: 1; transform: translateY(0);} }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+
+    .intro-section { display: flex; flex-wrap: wrap; max-width: 1100px; margin: 40px auto; padding: 20px; gap: 40px; align-items: center; }
+    .intro-text { flex: 1; min-width: 300px; }
+    .intro-text h2 { font-size: 2.2rem; color: #002244; margin-bottom: 15px; }
+    .intro-text p { font-size: 1.1rem; color: #333; line-height: 1.7; }
+    .intro-media { flex: 1; min-width: 300px; }
+    .intro-media img { width: 100%; max-width: 500px; border-radius: 10px; }
+
+    .divider-section {
+      background-color: #e6f0ff;
+      padding: 60px 20px;
+      margin-top: 60px;
+    }
+    .divider-section h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #002244;
+      margin-bottom: 20px;
+    }
+    .divider-section p {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .section { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+    .section h2 { font-size: 2rem; margin-bottom: 30px; text-align: center; }
+    .services { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .service { background: #fff; padding: 20px; border-radius: 10px; width: 250px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+    .service:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+    .service img { width: 60px; margin-bottom: 15px; }
+
+    .about, .timeline { background-color: #fff; padding: 40px 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .about p { margin-bottom: 15px; text-align: justify; }
+
+    .timeline { margin-top: 40px; }
+    .timeline .title-wrapper { display: flex; align-items: center; gap: 10px; margin-bottom: 30px; justify-content: center; }
+    .timeline .icon-box { font-size: 1.8rem; color: #002244; }
+    .timeline h3 { font-size: 1.8rem; }
+    .timeline-list { list-style: none; padding-left: 0; }
+    .timeline-item { margin-bottom: 30px; position: relative; padding-left: 30px; border-left: 3px solid #002244; }
+    .timeline-item::before { content: ""; position: absolute; left: -9px; top: 5px; width: 15px; height: 15px; background-color: #ffaa00; border-radius: 50%; }
+    .timeline-item-title { font-size: 1.2rem; margin-bottom: 5px; color: #002244; }
+    .timeline-text { color: #444; text-align: justify; }
+    .timeline span { display: block; font-size: 0.9rem; color: #777; margin-bottom: 10px; }
+
+    footer { background-color: #002244; color: #fff; padding: 20px; text-align: center; margin-top: 40px; }
+
+    @media (max-width: 768px) {
+      nav ul { flex-direction: column; align-items: center; }
+      .services { flex-direction: column; align-items: center; }
+      .intro-section { flex-direction: column; }
+    }
+
+    .team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+/*CONTACT*/
+
+.mapbox {
+    position: relative;
+    height: 350px;
+    width: 50%;
+    border-radius: 16px;
+    margin: 0 auto 30px auto; /* centraliza horizontalmente */
+    border: 1px solid var(--jet);
+    overflow: hidden;
+}
+
+    .mapbox figure { height: 100%; }
+
+    .mapbox iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        filter: grayscale(1) invert(1);
+    }
+
+    .logo-wrapper {
+        width: 270px; /* ajuste pro tamanho ideal */
+        height: 85px; /* define o corte */
+        overflow: hidden;
+        }
+
+        .logo-img {
+        width: 60%;
+        height: auto;
+        object-fit: cover; /* mantém o conteúdo cobrindo o espaço */
+        }
+
+  </style>
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
-    <main>
-        <aside class="sidebar " data-sidebar>
-            <div class="sidebar-info">
-                <figure class="avatar-box">
-                    <img src="https://ipworks.com.pt/wp-content/uploads/2017/01/logo.png" alt="avatar" width="50">
-                </figure>
-
-                <div class="info-content">
-                    <h1 class="name" title="Bluebox IP">Bluebox IP</h1>
-                    <p class="title">Soluções Informáticas</p>
-                </div>
-
-                <button class="info-more-btn" data-sidebar-btn>
-                    <span>Show Contacts</span>
-                    <ion-icon name="chevron-down"></ion-icon>
-                </button>
-            </div>
-
-            <div class="sidebar-info-more">
-                <div class="separator"></div>
-
-                <ul class="contacts-list">
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Email</p>
-
-                            <a href="mailto:geral@ipworks.com.pt" class="contact-link"><small>geral@ipworks.com.pt</small></a>
-                        </div>
-                    </li>
-
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Telefone</p>
-
-                            <a href="tel:+351229773010" class="contact-link"><small>+351 229 773 010</small></a>
-                        </div>
-                    </li>
-
-
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Morada</p>
-
-                            <address><small>Rua Dr. António Macedo, 147 - 4435-211 Rio Tinto</small></address>
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="separator"></div>
-
-                <ul class="social-list">
-                    <li class="social-item"><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                    <li class="social-item"><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                    <li class="social-item"><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                </ul>
-            </div>
-        </aside>
-
-        <div class="main-content">
-            <nav class="navbar">
-                <ul class="navbar-list">
-                    <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Blog</button></li>
-                    <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
-                </ul>
-            </nav>
-
-            <article class="about active" data-page="about">
-                <header>
-                    <h2 class="h2 article-title">Quem somos</h2>
-                </header>
-
-                <section class="about-text">
-                    <p>A IP é uma equipa multidisciplinar, inovadora e experiente, especializada em soluções de infraestrutura de telecomunicações para grandes projetos.</p>
-                    <p>Trabalhamos lado a lado com empreiteiros e responsáveis de obra em setores exigentes como hotelaria, saúde, educação e administração pública, garantindo uma resposta técnica fiável, eficaz e alinhada com os mais elevados padrões do mercado.</p>
-                    <p>Na IP, reunimos profissionais com ampla experiência no setor das TIC, adquirida ao longo de décadas de colaboração em projetos de referência nacional. Esta bagagem permite-nos compreender as reais necessidades de obra e responder com soluções ajustadas, robustas e sustentáveis.</p>
-                    <p>Assumimos uma posição independente e transversal no mercado, com acesso direto a fabricantes, operadores e distribuidores de diversas marcas. Esta abordagem garante aos nossos clientes liberdade de escolha, diversidade tecnológica e, acima de tudo, imparcialidade nas recomendações técnicas e comerciais — algo essencial quando se trata de tomar decisões estratégicas em fase de procurement.</p>
-                    <p>Contem connosco como parceiros técnicos, com uma visão prática, focada na execução e comprometida com o sucesso das obras.</p>
-                </section>
-
-                <section class="service">
-                    <h3 class="h3 service-title">Áreas de Atuação</h3>
-
-                    <ul class="service-list">
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="https://i.postimg.cc/4389jZkP/icon-design.png" alt="icon" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Infra-estruturas</h4>
-                                <p class="service-item-text">Fornecemos os materiais e equipamentos, realizamos os serviços de conectorização, certificação e etiquetagem de pontos de rede em tomadas e painéis, bem como de pontos de TV. Fusão e certificação de pigtails, incluindo a instalação dos acessórios propostos nos bastidores.</p>
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="https://i.postimg.cc/ZqgqrqzG/icon-dev.png" alt="icon" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Data Centers</h4>
-                                <p class="service-item-text">Projetamos e implementamos infraestruturas completas de Data Centers, com foco em performance, segurança e alta disponibilidade. Atuamos desde o planejamento até a manutenção, incluindo climatização, energia, cabeamento e virtualização.</p>
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="https://i.postimg.cc/xjLdzYxZ/icon-app.png" alt="icon" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Equipamentos ativos de rede</h4>
-                                <p class="service-item-text">Fornecemos, configuramos e gerimos switches, routers, firewalls e access points, garantindo redes seguras, rápidas e confiáveis, adaptadas às necessidades de cada cliente.</p>
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="https://i.postimg.cc/0NL8zHpx/icon-photo.png" alt="icon" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Soluções tripleplay (Internet, Telefone, TV)</h4>
-                                <p class="service-item-text">Disponibilizamos serviços de Internet, Telefone e TV através da MEO, com soluções empresariais personalizadas, garantindo cobertura, qualidade e suporte dedicado.</p>
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="https://i.postimg.cc/0NL8zHpx/icon-photo.png" alt="icon" width="40">
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Gestão de Projetos</h4>
-                                <p class="service-item-text">Planeamos, coordenamos e executamos projetos tecnológicos de forma eficiente e estruturada, garantindo prazos, qualidade e alinhamento com os objetivos do cliente.</p>
-                            </div>
-                        </li>
-                            <br>
-                            <h3 class="h3 service-title">Mais soluções</h3>
-                            <br>
-                        <li>
-                            <div class="card" style="--bg: #8e24aa">
-                            <div class="card__backdrop"></div>
-                            <div class="card__content">
-                                <h4 class="h4 service-item-title">Centrais telefónicas</h4>
-                                <p class="service-item-text">
-                                    Nossas soluções foram pensadas para suprir todas as demandas do mundo moderno. Tenha acesso ao seu telefone fixo de onde estiver, seja pelo smartphone ou pelo computador.
-                                </p>
-                            </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="card" style="--bg: #E53935">
-                            <div class="card__backdrop"></div>
-                            <div class="card__content">
-                                <h4 class="h4 service-item-title">Consultoria TI</h4>
-                                <p class="service-item-text">
-                                    Nossa consultoria de TI acompanha-te em todas as etapas, desde o planejamento do projeto até sua implementação, oferecendo infraestrutura de servidores e hospedagem, soluções de backup e recuperação de dados, proteção avançada por meio de cibersegurança e suporte técnico dedicado aos usuários.
-                                </p>
-                            </div>
-                            </div>
-                        </li>
-                    </ul>
-                    
-                </section>
-
-                <section class="testimonials">
-                    <h3 class="h3 testimonials-title">Sócios</h3>
-
-                    <ul class="testimonials-list has-scrollbar">
-                        <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
-                                <figure class="testimonials-avatar-box">
-                                    <img src="https://i.postimg.cc/zGDHfn3G/avatar-1.png" alt="avatar" data-testimonials-avatar width="60">
-                                </figure>
-
-                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Eng. Fernando Costa</h4>
-
-                                <div class="testimonials-text" data-testimonials-text>
-                                    <p>Engenheiro Eletrotécnico</p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
-                                <figure class="testimonials-avatar-box">
-                                    <img src="https://i.postimg.cc/zGDHfn3G/avatar-1.png" alt="avatar" data-testimonials-avatar width="60">
-                                </figure>
-
-                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Eng. Mario Azevedo</h4>
-
-                                <div class="testimonials-text" data-testimonials-text>
-                                    <p>Engenheiro Eletrotécnico</p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="testimonials-item">
-                            <div class="content-card" data-testimonials-item>
-                                <figure class="testimonials-avatar-box">
-                                    <img src="https://i.postimg.cc/DwY0yHtx/avatar-2.png" alt="avatar" data-testimonials-avatar width="60">
-                                </figure>
-
-                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Isabel Figueiredo</h4>
-
-                                <div class="testimonials-text" data-testimonials-text>
-                                    <p>Economista</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-
-                <div class="modal-container " data-modal-container>
-                    <div class="overlay " data-overlay></div>
-
-                    <section class="testimonials-modal">
-                        <button class="modal-close-btn" data-modal-close-btn><ion-icon name="close-outline"></ion-icon></button>
-
-                        <div class="modal-img-wrapper">
-                            <figure class="modal-avatar-box">
-                                <img src="https://i.postimg.cc/zGDHfn3G/avatar-1.png" alt="Daniel Lewis" width="80" data-modal-img>
-                            </figure>
-
-                            <img src="https://i.postimg.cc/mZ00RwX7/icon-quote.png" alt="quote icon">
-                        </div>
-
-                        <div class="modal-content">
-                            <h4 class="h3 modal-title" data-modal-title>Daniel Lewis</h4>
-                            <time datetime="2023-06-14">14 June, 2023</time>
-
-                            <div class="modal-text" data-modal-text>
-                                <p>Richard was hired to create a corporate identity. It's modern, clean and with a beautiful design that got a lot of praises from colleagues and visitors. We were very pleased with the work done. He has a lot of experience and is very concerned about the needs of client.</p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-
-                <section class="clients">
-                    <h3 class="h3 clients-title">Parceiros</h3>
-
-                    <ul class="clients-list has-scrollbar">
-
-                        <li class="clients-item">
-                            <a href="#"><img src="https://images.seeklogo.com/logo-png/11/2/rm-logo-png_seeklogo-114823.png" alt="logo"></a>
-                        </li>
-
-                        <li class="clients-item">
-                            <a href="#"><img src="https://applias.com/_obchody/applias.com/prilohy/84/png-teka-red-logo-rgb-new-1-1.png.big.jpg" alt="logo"></a>
-                        </li>
-
-                        <li class="clients-item">
-                            <a href="#"><img src="https://www.futurluz.pt/wp-content/uploads/Televes-Futurluz.png" alt="logo"></a>
-                        </li>
-
-                        <li class="clients-item">
-                            <a href="#"><img src="https://barpa.eu/wp-content/uploads/2024/07/barpa_logo2024.png" alt="logo"></a>
-                        </li>
-
-                        <li class="clients-item">
-                            <a href="#"><img src="https://www.albipack.com/images/quiterios_1537356684.png" alt="logo"></a>
-                        </li>
-
-                        <li class="clients-item">
-                            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/Blueline_logo.svg/2560px-Blueline_logo.svg.png" alt="logo"></a>
-                        </li>
-
-                        <li class="clients-item">
-                            <a href="#"><img src="https://logodownload.org/wp-content/uploads/2018/03/legrand-logo.png" alt="logo"></a>
-                        </li>
-
-                        <li class="clients-item">
-                            <a href="#"><img src="https://www.canadianelectricalwholesaler.ca/wp-content/uploads/2022/04/CEW-Leviton-Logo-400.png" alt="logo"></a>
-                        </li>
-                    </ul>
-                </section>
-
-            </article>
-            
-            <article class="resume " data-page="resume">
-                <header>
-                    <h2 class="h2 article-title">Nossa História</h2>
-                </header>
-                  
-                  <section class="timeline">
-                    <div class="title-wrapper">
-                      <div class="icon-box"><ion-icon name="business-outline"></ion-icon></div>
-                      <h3 class="h3">Fundação e Crescimento</h3>
-                    </div>
-                  
-                    <ol class="timeline-list">
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Nasce a BlueboxIP</h4>
-                            <span>202X - Presente</span>
-                            <p class="timeline-text">
-                              Surge então a BlueboxIP, uma nova marca com DNA técnico e empresarial forte, pronta para encarar os desafios de um mercado em constante evolução. A empresa mantém o compromisso com a qualidade, a inovação e o atendimento próximo ao cliente, oferecendo soluções completas em internet, telefonia e TV — com foco em performance, estabilidade e suporte humanizado.
-                            </p>
-                          </li>
-                          
-                          <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Fusão com a Bluebox Comunicações</h4>
-                            <span>202X</span>
-                            <p class="timeline-text">
-                              Visando ampliar sua atuação e potencial de escala, a IPWorks se uniu à Bluebox Comunicações — empresa com 16 anos de mercado, sólida experiência como agente da MEO e reconhecida por seu know-how em soluções tripleplay. Com essa fusão estratégica, passaram a integrar a nova sociedade a Dra. Isabel (Economista) e o Eng. Mário (Eletrotécnico), profissionais altamente qualificados e experientes.
-                            </p>
-                          </li>
-                          
-                        <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">Fusão com a Bluebox Comunicações</h4>
-                        <span>202X</span>
-                        <p class="timeline-text">
-                          Visando ampliar sua atuação e potencial de escala, a IPWorks se uniu à Bluebox Comunicações — empresa com 16 anos de mercado, sólida experiência como agente da MEO e reconhecida por seu know-how em soluções tripleplay. Com essa fusão estratégica, passaram a integrar a nova sociedade a Dra. Isabel (Economista) e o Eng. Mário (Eletrotécnico), profissionais altamente qualificados e experientes.
-                        </p>
-                      </li>
-
-                      <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">Atuação no mercado</h4>
-                        <span>200X - 202X</span>
-                        <p class="timeline-text">
-                          Ao longo dos anos, a IPWorks se consolidou como referência em soluções personalizadas de telecomunicações, com foco em serviços de voz, dados e infraestrutura. A empresa sempre buscou inovação, qualidade e atendimento técnico especializado, mantendo uma base sólida de clientes corporativos e residenciais.
-                        </p>
-                      </li>
-
-                      <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">Fundação da IPWorks</h4>
-                        <span>200X</span>
-                        <p class="timeline-text">
-                          A IPWorks foi fundada pelo Engenheiro Fernando Costa, profissional com mais de 20 anos de experiência na Siemens e ampla trajetória no setor de telecomunicações. Reconhecido pela sua responsabilidade, visão técnica e liderança, Fernando decidiu criar uma empresa voltada à inovação e excelência em soluções de conectividade e tecnologia.
-                        </p>
-                      </li>
-                    </ol>
-                  </section>
-            </article>
-
-            <article class="portfolio " data-page="portfolio">
-                <header>
-                    <h2 class="h2 article-title">Portfolio</h2>
-                </header>
-
-                <section class="projects">
-                    <ul class="filter-list">
-                        <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
-                        <li class="filter-item"><button data-filter-btn>Web Design</button></li>
-                        <li class="filter-item"><button data-filter-btn>Applications</button></li>
-                        <li class="filter-item"><button data-filter-btn>Web Development</button></li>
-                    </ul>
-
-                    <div class="filter-select-box">
-                        <button class="filter-select " data-select>
-                            <div class="select-value" data-select-value>Select Category</div>
-
-                            <div class="select-icon">
-                                <ion-icon name="chevron-down"></ion-icon>
-                            </div>
-                        </button>
-
-                        <ul class="select-list">
-                            <li class="select-item"><button data-select-item>All</button></li>
-                            <li class="select-item"><button data-select-item>Web Design</button></li>
-                            <li class="select-item"><button data-select-item>Applications</button></li>
-                            <li class="select-item"><button data-select-item>Web Development</button></li>
-                        </ul>
-                    </div>
-
-                    <ul class="project-list">
-                        <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/qRHpHMyd/project-1.jpg" alt="finance" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Finance</h3>
-                                <p class="project-category">Web Development</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/bNrcM2Wt/project-2.png" alt="orizon" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Orizon</h3>
-                                <p class="project-category">Web Development</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="web design">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/jSJVqYsq/project-3.jpg" alt="fundo" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Fundo</h3>
-                                <p class="project-category">Web Design</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="applications">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/dtpXxNGb/project-4.png" alt="brawlhalla" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Brawlhalla</h3>
-                                <p class="project-category">Applications</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="web design">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/43T0JKLw/project-5.png" alt="dsm." loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">DSM.</h3>
-                                <p class="project-category">Web Design</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="web design">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/qR1DX1kZ/project-6.png" alt="metaspark" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Metaspark</h3>
-                                <p class="project-category">Web Design</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/Kj4q9tjc/project-7.png" alt="summary" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Summary</h3>
-                                <p class="project-category">Web Development</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="applications">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/rw2j4B1w/project-8.jpg" alt="task manager" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Task Manager</h3>
-                                <p class="project-category">Applications</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="#">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="https://i.postimg.cc/7LxNsSQv/project-9.png" alt="arrival" loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">Arrival</h3>
-                                <p class="project-category">Web Development</p>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-            </article>
-
-            <article class="blog " data-page="blog">
-                <header>
-                    <h2 class="h2 article-title">IP News</h2>
-                </header>
-
-                <section class="skill">
-                    <h3 class="h3 skills-title">Execução</h3>
-
-                    <ul class="skills-list content-card">
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">EDIFÍCIO TUMAIA</h5>
-                                <data value="80">80%</data>
-                            </div>
-
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 80%;"></div>
-                            </div>
-                        </li>
-
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">HOTEL KOPKE</h5>
-                                <data value="80">100%</data>
-                            </div>
-
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 100%;"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">HOTEL BONJARDIM (THE SOCIAL HUB)</h5>
-                                <data value="70">100%</data>
-                            </div>
-
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 100%;"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">HOTEL ANTAS GARDEM</h5>
-                                <data value="70">100%</data>
-                            </div>
-
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 100%;"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">HOTEL AZUL</h5>
-                                <data value="90">100%</data>
-                            </div>
-
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 100%;"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">EDIFÍCIO PHARMÁCIA</h5>
-                                <data value="50">100%</data>
-                            </div>
-
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 100%;"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">EDIFÍCIO ATLANTICO LIVING</h5>
-                                <data value="50">100%</data>
-                            </div>
-
-                            <div class="skills-progress-bg">
-                                <div class="skills-progress-fill" style="width: 100%;"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </section><br>
-
-                <h3 class="h3 skills-title">Blog</h3>
-                <section class="blog-posts">
-                    <ul class="blog-posts-list">
-                        <li class="blog-post-item">
-                            <a href="#">
-                                    <figure class="blog-banner-box">
-                                        <img src="https://i.postimg.cc/DysCZrWs/blog-1.jpg" alt="Design conferences in 2024" loading="lazy">
-                                    </figure>
-
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2024-02-23">Feb 23, 2024</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">Design conferences in 2024</h3>
-                                    <p class="blog-text">In 2024, several exciting design conferences are set to take place, offering opportunities for professionals and enthusiasts to connect, learn, and share innovative ideas.</p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="https://i.postimg.cc/QC7qFDMs/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                                </figure>
-
-
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2024-01-29">Jan 29, 2024</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-                                    <p class="blog-text">When it comes to typography, choosing the right font is essential for effective design. In this article, I'll bring a brief overview of some of the best fonts that every designer should consider incorporating into their toolkit.</p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="https://i.postimg.cc/W1T71QcL/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                                </figure>
-
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2023-12-20">Dec 20, 2023</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">Design digest #80</h3>
-                                    <p class="blog-text">Hello, my friends. In this Design Digest, I'll show you a curated collection of the latest trends, insights, and innovations in the design world. This edition highlights key themes and discussions that are shaping the future of design.</p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="https://i.postimg.cc/2S0n8yxh/blog-4.jpg" alt="2023 UI interactions" loading="lazy">
-                                </figure>
-
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2023-11-29">Nov 29, 2023</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">2023 UI interactions</h3>
-                                    <p class="blog-text">As we move into 2024, 2023 was marked by the rapidly evolution of the landscape of UI interactions, driven by advancements in technology and user expectations. Dive with me in this text to see the main areas changed in this year.</p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="https://i.postimg.cc/YCCmVkw9/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                                </figure>
-
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2023-11-12">Nov 12, 2023</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-                                    <p class="blog-text">In the realm of design, spacing is often an overlooked yet crucial element that can significantly impact the overall aesthetic and functionality of a composition. This post will emphasize the importance of white space, margins, and padding in creating visually appealing and effective designs.</p>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="blog-post-item">
-                            <a href="#">
-                                <figure class="blog-banner-box">
-                                    <img src="https://i.postimg.cc/zBCBvP16/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                                </figure>
-
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <p class="blog-category">Design</p>
-                                        <span class="dot"></span>
-                                        <time datetime="2023-10-20">Oct 20, 2023</time>
-                                    </div>
-
-                                    <h3 class="h3 blog-item-title">Design digest #79</h3>
-                                    <p class="blog-text">Hi, my friends. In this Design Digest I'll focus in the tools and resources that we use daily in our projects. Also, I'll include examples of software recommendations, online courses, and design communities that foster collaboration and learning.</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-            </article>
-
-            <article class="contact " data-page="contact">
-                <header>
-                    <h2 class="h2 article-title">Contact</h2>
-                </header>
-
-                <section class="mapbox" data-mapbox>
-                    <figure>
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5123699.237179626!2d-10.244706225347363!3d39.64298220637365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1887cb9f1f5f79%3A0xb9fcfdd74874b3d6!2sPortugal!5e0!3m2!1sen!2spt!4v1713709942695!5m2!1sen!2spt" 
-                            width="400" 
-                            height="300" 
-                            loading="lazy"
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </figure>
-                </section>
-                
-
-                <section class="contact-form">
-                    <h3 class="h3 form-title">Contact Form</h3>
-
-                    <form action="#" class="form" data-form>
-                        <div class="input-wrapper">
-                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-                            <input type="email" name="email" class="form-input" placeholder="Email Address" required data-form-input>
-                        </div>
-
-                        <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input=""></textarea>
-
-                        <button class="form-btn" type="submit" disabled data-form-btn>
-                            <ion-icon name="paper-plane"></ion-icon>
-                            <span>Send Message</span>
-                        </button>
-                    </form>
-                </section>
-            </article>
+  <header>
+    <nav>
+        <div class="logo-wrapper">
+            <img src="BB (1).png" alt="Logo BBip" class="logo-img">
+          </div>
+          
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Projetos</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <h1>Especialistas em Infraestruturas de Comunicação e TI</h1>
+      <p>Oferecemos soluções completas e eficientes para sua empresa</p>
+      <button>Solicite um orçamento</button>
+    </div>
+  </section>
+
+  <section class="intro-section">
+    <div class="intro-text">
+      <h2>Soluções em Infraestruturas de Comunicação</h2>
+      <p class="timeline-text">Entregamos inovação, eficiência e segurança para ambientes corporativos, instituições e obras públicas. Atuamos lado a lado com empreiteiros e gestores para oferecer soluções sob medida que conectam tecnologia à produtividade.</p>
+    </div>
+    <div class="intro-media">
+      <img src="https://svg.template.creately.com/B1JQZLUaQPK" alt="Infraestrutura de TI">
+    </div>
+  </section>
+
+  <section class="divider-section">
+    <h2>Temos um forte compromisso com a Inovação</h2>
+    <p>Na Bluebox IP, buscamos sempre alinhar as soluções de infraestrutura com os desafios contemporâneos do mercado, oferecendo uma experiência diferenciada e resultados que impactam positivamente nossos clientes.</p>
+  </section>
+
+  <section class="intro-section">
+    <div class="intro-media">
+        <img src="http://ipworks.com.pt/wp-content/uploads/2014/04/bg.jpg" alt="Sobre a empresa">
+    </div>
+    <div class="intro-text">
+      <h2>Sobre a Empresa</h2>
+      <p class="timeline-text">A BlueboxIP é uma equipa multidisciplinar, inovadora e experiente, especializada em soluções de infraestrutura de telecomunicações para grandes projetos. Trabalhamos com setores exigentes como hotelaria, saúde, educação e administração pública, garantindo uma resposta técnica fiável e eficaz.</p>
+      <p>Reunimos profissionais com décadas de experiência no setor, o que nos permite compreender profundamente as necessidades de obra e entregar soluções ajustadas, robustas e sustentáveis.</p>
+    </div>
+  </section>
+  
+  <section class="section" style="max-width: 100%; background: url('https://ipworks.com.pt/wp-content/uploads/2014/04/banner.jpg') no-repeat center center fixed; padding: 30px;">
+    <h2 style="color: #e6f0ff;">Nossos Serviços</h2>
+    <div class="services">
+      <div class="service">
+        <img src="https://cdn-icons-png.flaticon.com/512/906/906175.png" alt="Cabeamento Estruturado">
+        <h3>Cabeamento Estruturado</h3>
+        <p>Projetos e execução de redes organizadas, eficientes e duráveis.</p>
+      </div>
+      <div class="service">
+        <img src="https://cdn-icons-png.flaticon.com/512/3022/3022258.png" alt="CFTV">
+        <h3>CFTV</h3>
+        <p>Monitoramento inteligente para proteção do seu patrimônio.</p>
+      </div>
+      <div class="service">
+        <img src="https://cdn-icons-png.flaticon.com/512/483/483356.png" alt="Redes Wi-Fi">
+        <h3>Redes Wi-Fi Corporativas</h3>
+        <p>Conectividade estável e segura para sua equipe e clientes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section" style="padding: 60px 20px; background-color: #fff;">
+    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 40px;">Sócios</h2>
+  
+    <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+      
+      <div class="team-card" style="background-color: #f9f9f9; border-radius: 20px; padding: 20px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.3s;">
+        <img src="https://via.placeholder.com/150" alt="Foto Sócio" style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover; margin-bottom: 15px;">
+        <h3 style="margin: 10px 0 5px;">Engenheiro Fernando Costa</h3>
+        <p style="font-weight: 500; color: #666;">CEO e Fundador</p>
+        <p style="font-size: 0.9rem; color: #777;">Mais de 20 anos liderando projetos de infraestrutura e soluções tecnológicas.</p>
+      </div>
+  
+      <div class="team-card" style="background-color: #f9f9f9; border-radius: 20px; padding: 20px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.3s;">
+        <img src="https://via.placeholder.com/150" alt="Foto Sócia" style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover; margin-bottom: 15px;">
+        <h3 style="margin: 10px 0 5px;">Dra. Isabel Figueiredo</h3>
+        <p style="font-weight: 500; color: #666;">Economista</p>
+        <p style="font-size: 0.9rem; color: #777;">Especialista economia e gerenciamento de negócios</p>
+      </div>
+  
+      <div class="team-card" style="background-color: #f9f9f9; border-radius: 20px; padding: 20px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.3s;">
+        <img src="https://via.placeholder.com/150" alt="Foto Equipe" style="border-radius: 50%; width: 120px; height: 120px; object-fit: cover; margin-bottom: 15px;">
+        <h3 style="margin: 10px 0 5px;">Engenheiro Mário Azevedo</h3>
+        <p style="font-weight: 500; color: #666;">Engenheiro de Eletrotécnico</p>
+        <p style="font-size: 0.9rem; color: #777;">Responsável técnico por obras e instalações de alta complexidade em todo o país.</p>
+      </div>
+  
+    </div>
+  </section>
+  
+  <section class="clients-section" style="background-color: #f4f4f4; padding: 60px 20px;">
+    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 40px;">Parceiros</h2>
+  
+    <ul class="clients-list" style="display: flex; overflow-x: auto; gap: 30px; padding: 0 10px; scroll-snap-type: x mandatory;">
+      
+      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
+        <a href="#"><img src="https://images.seeklogo.com/logo-png/11/2/rm-logo-png_seeklogo-114823.png" alt="RM Logo" style="max-width: 100%; height: auto;"></a>
+      </li>
+  
+      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
+        <a href="#"><img src="https://applias.com/_obchody/applias.com/prilohy/84/png-teka-red-logo-rgb-new-1-1.png.big.jpg" alt="Teka Logo" style="max-width: 100%; height: auto;"></a>
+      </li>
+  
+      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
+        <a href="#"><img src="https://www.futurluz.pt/wp-content/uploads/Televes-Futurluz.png" alt="Televes Logo" style="max-width: 100%; height: auto;"></a>
+      </li>
+  
+      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
+        <a href="#"><img src="https://barpa.eu/wp-content/uploads/2024/07/barpa_logo2024.png" alt="Barpa Logo" style="max-width: 100%; height: auto;"></a>
+      </li>
+  
+      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
+        <a href="#"><img src="https://www.albipack.com/images/quiterios_1537356684.png" alt="Albipack Logo" style="max-width: 100%; height: auto;"></a>
+      </li>
+  
+      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/Blueline_logo.svg/2560px-Blueline_logo.svg.png" alt="Blueline Logo" style="max-width: 100%; height: auto;"></a>
+      </li>
+  
+      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
+        <a href="#"><img src="https://logodownload.org/wp-content/uploads/2018/03/legrand-logo.png" alt="Legrand Logo" style="max-width: 100%; height: auto;"></a>
+      </li>
+  
+      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
+        <a href="#"><img src="https://www.canadianelectricalwholesaler.ca/wp-content/uploads/2022/04/CEW-Leviton-Logo-400.png" alt="Leviton Logo" style="max-width: 100%; height: auto;"></a>
+      </li>
+  
+    </ul>
+  </section>
+  
+  <section class="section timeline">
+    <div class="title-wrapper">
+      <div class="icon-box"><ion-icon name="business-outline"></ion-icon></div>
+      <h3 class="h3">Nossa História</h3>
+    </div>
+    <ol class="timeline-list">
+      <li class="timeline-item">
+        <h4 class="timeline-item-title">A Iniciativa Paralela Lda, passa a Bluebox IP Lda</h4>
+        <span>2023 - Presente</span>
+        <p class="timeline-text">
+            Visando fortalecer ainda mais a empresa, o Engenheiro Fernando Costa identificou na Bluebox Comunicações uma excelente oportunidade de sinergia e crescimento mútuo. Essa união estratégica aconteceu em 2023, consolidando uma parceria sólida e dando origem à Bluebox IP, mantendo o compromisso com a qualidade, a inovação e o atendimento próximo ao cliente, oferecendo soluções completas em internet, telefonia e TV com foco em performance, estabilidade e suporte humanizado.
+            Surge então a BlueboxIP, uma nova marca com DNA técnico e empresarial forte, pronta para encarar os desafios de um mercado em constante evolução.
+        </p>
+      </li>
+      
+      <li class="timeline-item">
+        <h4 class="timeline-item-title">Atuação no mercado</h4>
+        <span>200X - 202X</span>
+        <p class="timeline-text">
+          Ao longo dos anos, a IPWorks se consolidou como referência em soluções personalizadas de telecomunicações, com foco em serviços de voz, dados e infraestrutura. A empresa sempre buscou inovação, qualidade e atendimento técnico especializado, mantendo uma base sólida de clientes corporativos e residenciais.
+        </p>
+      </li>
+      <li class="timeline-item">
+        <h4 class="timeline-item-title">Fundação da IPWorks - Iniciativa Paralela Lda</h4>
+        <span>2009</span>
+        <p class="timeline-text">
+          A IPWorks foi fundada pelo Engenheiro Fernando Costa, profissional com mais de 35 anos de experiência liderando projetos de infraestrutura e soluções tecnológicas e ampla trajetória no setor de telecomunicações. Reconhecido pela sua responsabilidade, visão técnica e liderança, Fernando decidiu criar uma empresa voltada à inovação e excelência em soluções de conectividade e tecnologia.
+        </p>
+      </li>
+    </ol>
+  </section>
+  <section class="intro-section">
+    <div class="intro-text">
+      <h2>Entre em Contato</h2>
+      <p>Fale com a nossa equipe técnica e tire suas dúvidas. Estamos prontos para entender suas necessidades e oferecer a melhor solução em conectividade e infraestrutura de comunicação.</p>
+      <form action="#" method="post">
+        <div style="margin-bottom: 10px;">
+          <input type="text" name="nome" placeholder="Seu nome" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;">
+          <input type="email" name="email" placeholder="Seu e-mail" required style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;">
+          <textarea name="mensagem" rows="4" placeholder="Sua mensagem" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
         </div>
-    </main>
-
-    <script src="bluescripts.js"></script>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <button type="submit" style="background-color: #002244; color: #fff; padding: 10px 20px; border: none; border-radius: 5px;">Enviar</button>
+      </form>
+    </div>
+    <div class="intro-media">
+      <img src="https://th.bing.com/th/id/R.2419c59d8b937a6b4dcc6f4c2bd60970?rik=nn3CxWDKZOQQ5Q&pid=ImgRaw&r=0" alt="Contato">
+    </div>
+  </section>
+  <section class="mapbox" data-mapbox>
+    <figure>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5123699.237179626!2d-10.244706225347363!3d39.64298220637365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1887cb9f1f5f79%3A0xb9fcfdd74874b3d6!2sPortugal!5e0!3m2!1sen!2spt!4v1713709942695!5m2!1sen!2spt" 
+            width="400" 
+            height="300" 
+            loading="lazy"
+            style="border:0;" 
+            allowfullscreen="" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </figure>
+</section>
+  <footer>
+    <p>&copy; 2025 Bluebox IP - Todos os direitos reservados</p>
+  </footer>
+  <script>
+    /* Inicialização do particles.js com interação ao mover o mouse */
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60 },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3 },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+        "move": { "enable": true, "speed": 2 }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "grab" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "grab": { "distance": 200, "line_linked": { "opacity": 0.8 } },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
