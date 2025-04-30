@@ -25,36 +25,7 @@ header {
   margin: 1px;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 60px;
-  padding: 0 40px;
-  width: 100%;
-}
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 60px;
-  padding: 0;
-  margin: 0;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.3rem;
-  font-weight: normal;
-  transition: transform 0.3s ease, color 0.3s ease;
-  display: inline-block;
-}
-
-nav a:hover {
-  transform: scale(1.15);
-  color: #ffaa00;
-}
 
 /* ========== HERO SECTION ========== */
 .hero {
@@ -305,6 +276,80 @@ footer {
   margin-top: 40px;
 }
 
+
+
+/* ========== MAPA / CONTATO ========== */
+.mapbox {
+  position: relative;
+  height: 350px;
+  width: 50%;
+  border-radius: 16px;
+  margin: 0 auto 30px auto;
+  border: 1px solid var(--jet);
+  overflow: hidden;
+}
+
+.mapbox figure {
+  height: 100%;
+}
+
+.mapbox iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(1) invert(1);
+}
+
+/* ========== LOGO ========== */
+.logo-wrapper {
+  width: 270px;
+  height: 65px;
+  overflow: hidden;
+}
+
+.logo-img {
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ========== DEMAIS HOVERS ========== */
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 0 40px;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: normal;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+nav a:hover {
+  transform: scale(1.15);
+  color: #ffaa00;
+}
+
 /* ========== MENU TOGGLE ========== */
 .menu-toggle {
   display: none;
@@ -349,6 +394,11 @@ footer {
     display: flex;
   }
 
+  nav li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Linha sutil entre os links */
+  }
+  
   nav a {
     font-size: 1.2rem;
   }
@@ -434,45 +484,4 @@ footer {
   footer {
     font-size: 0.9rem;
   }
-}
-
-/* ========== MAPA / CONTATO ========== */
-.mapbox {
-  position: relative;
-  height: 350px;
-  width: 50%;
-  border-radius: 16px;
-  margin: 0 auto 30px auto;
-  border: 1px solid var(--jet);
-  overflow: hidden;
-}
-
-.mapbox figure {
-  height: 100%;
-}
-
-.mapbox iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  filter: grayscale(1) invert(1);
-}
-
-/* ========== LOGO ========== */
-.logo-wrapper {
-  width: 270px;
-  height: 65px;
-  overflow: hidden;
-}
-
-.logo-img {
-  width: 60%;
-  height: auto;
-  object-fit: cover;
-}
-
-/* ========== DEMAIS HOVERS ========== */
-.team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
