@@ -10,7 +10,7 @@
     header { background-color: #002244; color: #fff; padding: 1px 0; }
     nav { display: flex; justify-content: center; align-items: center; gap: 60px; }
     nav ul { list-style: none; display: flex; gap: 60px; padding: 0; margin: 0;}
-    nav a { color: #fff; text-decoration: none; font-size: 1.3rem; font-weight: normal; transition: transform 0.3s ease, color 0.3s ease; }
+    nav a { color: #fff; text-decoration: none; font-size: 1.3rem; font-weight: normal; transition: transform 0.3s ease, color 0.3s ease; display: inline-block; }
     nav a:hover { transform: scale(1.15); color: #ffaa00; }
 
     .hero { position: relative; background: url('https://ipworks.com.pt/wp-content/uploads/2014/04/banner.jpg') no-repeat center center fixed;
@@ -19,11 +19,13 @@
     .hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 0 20px; }
     .hero-content h1 { font-size: 2.8rem; margin-bottom: 20px; animation: fadeInDown 1s ease; }
     .hero-content p { font-size: 1.3rem; margin-bottom: 30px; animation: fadeInUp 1s ease; }
-    .hero-content button { background-color: #ffaa00; border: none; padding: 15px 30px; font-size: 1rem; cursor: pointer; border-radius: 5px; transition: background 0.3s; animation: fadeInUp 1.2s ease; }
-    .hero-content button:hover { background-color: #e69900; }
+    .hero-content button { background-color: #ffaa00; border: none; padding: 15px 30px; font-size: 1rem; cursor: pointer; border-radius: 50px; transition: background 0.3s, transform 0.3s ease; animation: fadeInUp 1.2s ease; }
+    /* Efeito de zoom suave ao passar o mouse */
+    .hero-content button:hover { background-color: #61aff6; transform: scale(1.05); }
 
     @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px);} to { opacity: 1; transform: translateY(0);} }
     @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+    
 
     .intro-section { display: flex; flex-wrap: wrap; max-width: 1100px; margin: 40px auto; padding: 20px; gap: 40px; align-items: center; }
     .intro-text { flex: 1; min-width: 300px; }
@@ -125,7 +127,7 @@
   <header>
     <nav>
         <div class="logo-wrapper">
-            <img src="BBip - Archivo Black - Transparente.png" alt="Logo BBip" class="logo-img">
+            <img src="BBip - Baloo - 06649d.png" alt="Logo BBip" class="logo-img">
           </div>
           
       <ul>
