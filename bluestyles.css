@@ -1,113 +1,478 @@
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; color: #222; background-color: #f4f4f4; line-height: 1.6; }
-    header { background-color: #002244; color: #fff; padding: 1px 0; }
-    nav { display: flex; justify-content: space-between; align-items: center; gap: 60px; padding: 0 40px; width: 100%; }
-    nav ul { list-style: none; display: flex; gap: 60px; padding: 0; margin: 0;}
-    nav a { color: #fff; text-decoration: none; font-size: 1.3rem; font-weight: normal; transition: transform 0.3s ease, color 0.3s ease; display: inline-block; }
-    nav a:hover { transform: scale(1.15); color: #ffaa00; }
-
-    .hero { position: relative; background: url('https://ipworks.com.pt/wp-content/uploads/2014/04/banner.jpg') no-repeat center center fixed;
-    color: #fff; text-align: center; height: 100vh; overflow: hidden; }
-    #particles-js { position: absolute; width: 100%; height: 100%; top: 0; left: 0; }
-    .hero-content { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 0 20px; }
-    .hero-content h1 { font-size: 2.8rem; margin-bottom: 20px; animation: fadeInDown 1s ease; }
-    .hero-content p { font-size: 1.3rem; margin-bottom: 30px; animation: fadeInUp 1s ease; }
-    .hero-content button { background-color: #ffaa00; border: none; padding: 15px 30px; font-size: 1rem; cursor: pointer; border-radius: 50px; transition: background 0.3s, transform 0.3s ease; animation: fadeInUp 1.2s ease; }
-    /* Efeito de zoom suave ao passar o mouse */
-    .hero-content button:hover { background-color: #61aff6; transform: scale(1.05); }
-
-    @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px);} to { opacity: 1; transform: translateY(0);} }
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
-    
-
-    .intro-section { display: flex; flex-wrap: wrap; max-width: 1100px; margin: 40px auto; padding: 20px; gap: 40px; align-items: center; }
-    .intro-text { flex: 1; min-width: 300px; }
-    .intro-text h2 { font-size: 2.2rem; color: #002244; margin-bottom: 15px; }
-    .intro-text p { font-size: 1.1rem; color: #333; line-height: 1.7; }
-    .intro-media { flex: 1; min-width: 300px; }
-    .intro-media img { width: 100%; max-width: 500px; border-radius: 10px; }
-
-    .divider-section {
-      background-color: #e6f0ff;
-      padding: 60px 20px;
-      margin-top: 60px;
-    }
-    .divider-section h2 {
-      text-align: center;
-      font-size: 2rem;
-      color: #002244;
-      margin-bottom: 20px;
-    }
-    .divider-section p {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-      font-size: 1.1rem;
-      color: #444;
-    }
-
-    .section { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
-    .section h2 { font-size: 2rem; margin-bottom: 30px; text-align: center; }
-    .services { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
-    .service { background: #fff; padding: 20px; border-radius: 10px; width: 250px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
-    .service:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
-    .service img { width: 60px; margin-bottom: 15px; }
-
-    .about, .timeline { background-color: #fff; padding: 40px 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-    .about p { margin-bottom: 15px; text-align: justify; }
-
-    .timeline { margin-top: 40px; }
-    .timeline .title-wrapper { display: flex; align-items: center; gap: 10px; margin-bottom: 30px; justify-content: center; }
-    .timeline .icon-box { font-size: 1.8rem; color: #002244; }
-    .timeline h3 { font-size: 1.8rem; }
-    .timeline-list { list-style: none; padding-left: 0; }
-    .timeline-item { margin-bottom: 30px; position: relative; padding-left: 30px; border-left: 3px solid #002244; }
-    .timeline-item::before { content: ""; position: absolute; left: -9px; top: 5px; width: 15px; height: 15px; background-color: #ffaa00; border-radius: 50%; }
-    .timeline-item-title { font-size: 1.2rem; margin-bottom: 5px; color: #002244; }
-    .timeline-text { color: #444; text-align: justify; }
-    .timeline span { display: block; font-size: 0.9rem; color: #777; margin-bottom: 10px; }
-
-    footer { background-color: #002244; color: #fff; padding: 20px; text-align: center; margin-top: 40px; }
-
-    @media (max-width: 768px) {
-      nav ul { flex-direction: column; align-items: center; }
-      .services { flex-direction: column; align-items: center; }
-      .intro-section { flex-direction: column; }
-    }
-
-    .team-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-/*CONTACT*/
-
-.mapbox {
-    position: relative;
-    height: 350px;
-    width: 50%;
-    border-radius: 16px;
-    margin: 0 auto 30px auto; /* centraliza horizontalmente */
-    border: 1px solid var(--jet);
-    overflow: hidden;
+   /* ========== RESET E BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-    .mapbox figure { height: 100%; }
+html, body {
+  width: 100%;
+  height: 100%;
+}
 
-    .mapbox iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-        filter: grayscale(1) invert(1);
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
 
-    .logo-wrapper {
-        width: 270px; /* ajuste pro tamanho ideal */
-        height: 65px; /* define o corte */
-        overflow: hidden;
-        }
+/* ========== HEADER E NAVEGAÇÃO ========== */
+header {
+  background-color: #002244;
+  color: #fff;
+  padding: 1px 0;
+  margin: 1px;
+}
 
-        .logo-img {
-        width: 60%;
-        height: auto;
-        object-fit: cover; /* mantém o conteúdo cobrindo o espaço */
-        }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  padding: 0 40px;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: normal;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+nav a:hover {
+  transform: scale(1.15);
+  color: #ffaa00;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('https://ipworks.com.pt/wp-content/uploads/2014/04/banner.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease;
+}
+
+.hero-content button {
+  background-color: #ffaa00;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background 0.3s, transform 0.3s ease;
+  animation: fadeInUp 1.2s ease;
+}
+
+.hero-content button:hover {
+  background-color: #61aff6;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== SEÇÕES INTRODUTÓRIAS ========== */
+.intro-section {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  gap: 40px;
+  align-items: center;
+}
+
+.intro-text, .intro-media {
+  flex: 1;
+  min-width: 300px;
+}
+
+.intro-text h2 {
+  font-size: 2.2rem;
+  color: #002244;
+  margin-bottom: 15px;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+.intro-media img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+/* ========== DIVISOR ========== */
+.divider-section {
+  background-color: #e6f0ff;
+  padding: 60px 20px;
+  margin-top: 60px;
+}
+
+.divider-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #002244;
+  margin-bottom: 20px;
+}
+
+.divider-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* ========== SERVIÇOS ========== */
+.section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.service {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.service img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+/* ========== SOBRE / TIMELINE ========== */
+.about, .timeline {
+  background-color: #fff;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.about p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.timeline {
+  margin-top: 40px;
+}
+
+.timeline .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.timeline .icon-box {
+  font-size: 1.8rem;
+  color: #002244;
+}
+
+.timeline h3 {
+  font-size: 1.8rem;
+}
+
+.timeline-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 30px;
+  border-left: 3px solid #002244;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: #ffaa00;
+  border-radius: 50%;
+}
+
+.timeline-item-title {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #002244;
+}
+
+.timeline-text {
+  color: #444;
+  text-align: justify;
+}
+
+.timeline span {
+  display: block;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #002244;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ========== MENU TOGGLE ========== */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* ========== RESPONSIVO TABLET ========== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 20px;
+  }
+
+  /* Container para alinhar logo e botão */
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    display: none;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 1.2rem;
+  }
+
+  .intro-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .timeline .title-wrapper {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .mapbox {
+    width: 90%;
+  }
+}
+
+/* ========== RESPONSIVO CELULAR PEQUENO ========== */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+    padding: 0 10px;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .hero-content button {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+
+  .intro-text h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .divider-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .divider-section p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .section h2 {
+    font-size: 1.6rem;
+  }
+
+  .service {
+    width: 100%;
+  }
+
+  .timeline h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .timeline-item-title {
+    font-size: 1.1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+/* ========== MAPA / CONTATO ========== */
+.mapbox {
+  position: relative;
+  height: 350px;
+  width: 50%;
+  border-radius: 16px;
+  margin: 0 auto 30px auto;
+  border: 1px solid var(--jet);
+  overflow: hidden;
+}
+
+.mapbox figure {
+  height: 100%;
+}
+
+.mapbox iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(1) invert(1);
+}
+
+/* ========== LOGO ========== */
+.logo-wrapper {
+  width: 270px;
+  height: 65px;
+  overflow: hidden;
+}
+
+.logo-img {
+  width: 60%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ========== DEMAIS HOVERS ========== */
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
