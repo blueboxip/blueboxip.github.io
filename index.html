@@ -6,6 +6,8 @@
   <title>Bluebox IP - Infraestrutura de TI</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="bluestyles.css">
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
@@ -118,45 +120,52 @@
     </div>
   </section>
   
-  <section class="clients-section" style="background-color: #f4f4f4; padding: 60px 20px;">
-    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 40px;">Parceiros</h2>
-  
-    <ul class="clients-list" style="display: flex; overflow-x: auto; gap: 30px; padding: 0 10px; scroll-snap-type: x mandatory;">
-      
-      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
-        <a href="#"><img src="https://images.seeklogo.com/logo-png/11/2/rm-logo-png_seeklogo-114823.png" alt="RM Logo" style="max-width: 100%; height: auto;"></a>
-      </li>
-  
-      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
-        <a href="#"><img src="https://applias.com/_obchody/applias.com/prilohy/84/png-teka-red-logo-rgb-new-1-1.png.big.jpg" alt="Teka Logo" style="max-width: 100%; height: auto;"></a>
-      </li>
-  
-      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
-        <a href="#"><img src="https://www.futurluz.pt/wp-content/uploads/Televes-Futurluz.png" alt="Televes Logo" style="max-width: 100%; height: auto;"></a>
-      </li>
-  
-      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
-        <a href="#"><img src="https://barpa.eu/wp-content/uploads/2024/07/barpa_logo2024.png" alt="Barpa Logo" style="max-width: 100%; height: auto;"></a>
-      </li>
-  
-      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
-        <a href="#"><img src="https://www.albipack.com/images/quiterios_1537356684.png" alt="Albipack Logo" style="max-width: 100%; height: auto;"></a>
-      </li>
-  
-      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
-        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/Blueline_logo.svg/2560px-Blueline_logo.svg.png" alt="Blueline Logo" style="max-width: 100%; height: auto;"></a>
-      </li>
-  
-      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
-        <a href="#"><img src="https://logodownload.org/wp-content/uploads/2018/03/legrand-logo.png" alt="Legrand Logo" style="max-width: 100%; height: auto;"></a>
-      </li>
-  
-      <li class="clients-item" style="min-width: 150px; scroll-snap-align: center;">
-        <a href="#"><img src="https://www.canadianelectricalwholesaler.ca/wp-content/uploads/2022/04/CEW-Leviton-Logo-400.png" alt="Leviton Logo" style="max-width: 100%; height: auto;"></a>
-      </li>
-  
-    </ul>
-  </section>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<section class="clients-section" style="background-color: #f4f4f4; padding: 60px 20px;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 40px;">Parceiros</h2>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <a href="#"><img src="https://images.seeklogo.com/logo-png/11/2/rm-logo-png_seeklogo-114823.png" alt="RM Logo"></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#"><img src="https://applias.com/_obchody/applias.com/prilohy/84/png-teka-red-logo-rgb-new-1-1.png.big.jpg" alt="Teka Logo"></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#"><img src="https://www.futurluz.pt/wp-content/uploads/Televes-Futurluz.png" alt="Televes Logo"></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#"><img src="https://barpa.eu/wp-content/uploads/2024/07/barpa_logo2024.png" alt="Barpa Logo"></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#"><img src="https://www.albipack.com/images/quiterios_1537356684.png" alt="Albipack Logo"></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f0/Blueline_logo.svg/2560px-Blueline_logo.svg.png" alt="Blueline Logo"></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#"><img src="https://logodownload.org/wp-content/uploads/2018/03/legrand-logo.png" alt="Legrand Logo"></a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#"><img src="https://www.canadianelectricalwholesaler.ca/wp-content/uploads/2022/04/CEW-Leviton-Logo-400.png" alt="Leviton Logo"></a>
+      </div>
+
+    </div>
+
+    <!-- Botões de navegação -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Paginação opcional -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   
   <section class="section timeline">
     <div class="title-wrapper">
@@ -232,6 +241,31 @@
         menu.classList.toggle('active');
       });
     });
-  </script>  
+  </script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        1024: { slidesPerView: 5 },
+      },
+    });
+  </script>
+  
 </body>
 </html>
