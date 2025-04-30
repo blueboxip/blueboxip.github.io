@@ -19,10 +19,16 @@ body {
 
 /* ========== HEADER E NAVEGAÇÃO ========== */
 header {
+  position: fixed;
   background-color: #002244;
   color: #fff;
   padding: 1px 0;
   margin: 1px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* garante que fique acima de outros elementos */
+  box-shadow: 0 2px 5px rgb(255, 255, 255); /* opcional, só para um visual mais bonito */
 }
 
 
