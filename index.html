@@ -257,19 +257,104 @@
       <img src="https://th.bing.com/th/id/R.2419c59d8b937a6b4dcc6f4c2bd60970?rik=nn3CxWDKZOQQ5Q&pid=ImgRaw&r=0" alt="Contato">
     </div>
   </section>
-  <section class="mapbox" data-mapbox>
-    <figure>
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5123699.237179626!2d-10.244706225347363!3d39.64298220637365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1887cb9f1f5f79%3A0xb9fcfdd74874b3d6!2sPortugal!5e0!3m2!1sen!2spt!4v1713709942695!5m2!1sen!2spt" 
-            width="400" 
-            height="300" 
-            loading="lazy"
-            style="border:0;" 
-            allowfullscreen="" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </figure>
+
+<!-- Contador com ícones (antes do footer) -->
+<section class="counter-section">
+  <div class="counter-container">
+    <div class="counter-box">
+      <i class="fas fa-project-diagram icon"></i>
+      <span class="counter" data-target="19">0</span>
+      <p>Obras em 2025</p>
+    </div>
+    <div class="counter-box">
+      <i class="fas fa-network-wired icon"></i>
+      <span class="counter" data-target="67000">0</span>
+      <p>Km's de Cabos Instalados</p>
+    </div>
+    <div class="counter-box">
+      <i class="fas fa-tools icon"></i>
+      <span class="counter" data-target="18000">0</span>
+      <p>Fusões de Fibra</p>
+    </div>
+    <div class="counter-box">
+      <i class="fas fa-server icon"></i>
+      <span class="counter" data-target="196">0</span>
+      <p>Bastidores Montados</p>
+    </div>
+  </div>
 </section>
+
+<style>
+.counter-section {
+  background-color: #002244;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,52,0.7)), url('https://ipworks.com.pt/wp-content/uploads/2014/04/banner.jpg') no-repeat center center;
+  color: #fff;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.counter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.counter-box {
+  flex: 1 1 200px;
+  max-width: 220px;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #00aced; /* azul claro para contraste */
+}
+
+.counter {
+  font-size: 1.5rem;
+  display: block;
+  margin: 10px 0;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.counter');
+
+  const animateCounter = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+    const speed = 200; // quanto menor, mais rápido
+
+    const updateCount = () => {
+      const increment = target / speed;
+      count += increment;
+
+      if (count < target) {
+        counter.textContent = Math.floor(count).toLocaleString();
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.textContent = target.toLocaleString();
+      }
+    };
+
+    updateCount();
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.6 });
+
+  counters.forEach(counter => observer.observe(counter));
+});
+</script>
+
     <footer class="footer">
       <div class="footer-container">
         <!-- Coluna 1: Serviços -->
@@ -295,13 +380,35 @@
             <li><i class="fas fa-phone"></i><a href="tel:+351229773010"> +351 229 773 010</a></li>
             <li><i class="fas fa-envelope"></i><a href="mailto:contato@bbip.pt"> contato@bbip.pt</a></li>
           </ul>
-          
+          <figure>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5123699.237179626!2d-10.244706225347363!3d39.64298220637365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1887cb9f1f5f79%3A0xb9fcfdd74874b3d6!2sPortugal!5e0!3m2!1sen!2spt!4v1713709942695!5m2!1sen!2spt" 
+                width="100%" 
+                height="200" 
+                loading="lazy"
+                style="border:0;" 
+                allowfullscreen="" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </figure>
         </div>
     
-        <!-- Coluna 3: Mapa -->
+        <!-- Coluna 3:  -->
         <div class="footer-column">
-          <h3>Maps</h3>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.0992147651878!2d-8.555633224588824!3d41.17600317132751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24639701d59543%3A0x32a85cbeab61262b!2sR.%20Dr.%20Ant%C3%B3nio%20Macedo%20147%2C%204435-211%20Rio%20Tinto!5e0!3m2!1sen!2spt!4v1746539670124!5m2!1sen!2spt" width="100%" height="230" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <h3>Trabalhe Conosco</h3>
+          <p>Estamos sempre à procura de profissionais talentosos, comprometidos e apaixonados por ITED e tecnologia. Se você quer fazer parte da nossa equipa, envie-nos o seu currículo.</p><br>
+          <a href="mailto:recrutamento@bbip.pt?subject=Envio de Currículo - Trabalhe Conosco" class="btn-curriculo">
+            Envie seu Currículo
+          </a>          
+          <br><br><h3></h3>
+          <div class="livro-reclamacoes">
+            <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer">
+              <img src="https://www.livroreclamacoes.pt/Inicio/img/LRE_Theme.Logo_White.png?05CfBRVXskp07svwn4m+4A" 
+                   alt="Livro de Reclamações" 
+                   class="livro-img">
+            </a>
+          </div>
+          
         </div>
       </div>    
     <p>&copy; 2025 Bluebox IP - Todos os direitos reservados</p>

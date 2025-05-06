@@ -102,6 +102,45 @@ header {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ========== BOTÃO CURRÍCULO ========== */
+.btn-curriculo {
+  display: inline-block;
+  padding: 8px 24px;
+  background-color: #002244; /* Azul escuro institucional */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-curriculo:hover {
+  background-color: #005c99;
+  transform: translateY(-2px);
+}
+
+/* ========== BOTÃO LIVRO DE RECLAMAÇÕES ========== */
+.livro-reclamacoes {
+  text-align: center;
+  margin: 40px 0;
+  background-color: #002244;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.livro-img {
+  max-width: 220px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.livro-img:hover {
+  transform: scale(1.05);
+}
+
 /* ========== SEÇÕES INTRODUTÓRIAS ========== */
 .intro-section {
   display: flex;
@@ -522,7 +561,7 @@ nav a:hover {
   .footer {
     background-color: #002244;
     color: #ffffff;
-    padding: 40px 20px;
+    padding: 80px 20px;
   }
   
   .footer-container {
@@ -585,4 +624,5 @@ nav a:hover {
       margin: 10px 0;
     }
   }
+  
   
