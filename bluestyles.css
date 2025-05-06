@@ -498,3 +498,23 @@ nav a:hover {
   display: block;
   margin: 0 auto;
 }
+
+.clients-section {
+    background: linear-gradient(rgba(170,212,250,0.7), rgba(170,212,250,0.7)), url('src/bbip_background.jpg') no-repeat center center / cover;
+    padding: 150px 20px;
+    min-height: 100dvh;
+  }
+
+  @media (max-width: 768px) {
+    .clients-section {
+      padding: 80px 15px;
+      background-position: center top;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .clients-section {
+      padding: 60px 10px;
+      background-position: top;
+    }
+  }
