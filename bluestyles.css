@@ -106,7 +106,7 @@ header {
 .btn-curriculo {
   display: inline-block;
   padding: 8px 24px;
-  background-color: #002244; /* Azul escuro institucional */
+  background-color: #ff7f00; /* Azul escuro institucional */
   color: #ffffff;
   font-size: 1rem;
   font-weight: 500;
@@ -125,10 +125,9 @@ header {
 /* ========== BOTÃO LIVRO DE RECLAMAÇÕES ========== */
 .livro-reclamacoes {
   text-align: center;
-  margin: 40px 0;
-  background-color: #002244;
+  margin: 10px 0;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 
 .livro-img {
@@ -314,14 +313,14 @@ header {
 
 /* ========== FOOTER ========== */
 footer {
-  background-color: #002244;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,52,0.5)),
+              url('src/Letras\ 3D\ _BBip_\ em\ azul.png') no-repeat center center;
+  background-size: cover;
   color: #fff;
   padding: 20px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 2px;
 }
-
-
 
 /* ========== MAPA / CONTATO ========== */
 .mapbox {
@@ -482,7 +481,7 @@ nav a:hover {
 }
 
 .clients-section {
-    background: linear-gradient(rgba(170, 212, 250, 0.3), rgba(240, 248, 255, 0.5)), url('src/bbip_background.jpg') no-repeat center center / cover;
+    background: linear-gradient(rgba(170, 212, 250, 0.3), rgba(240, 248, 255, 0.5)), url('src/bbip_3D.jpg') no-repeat center center / cover;
     padding: 90px 20px;
     min-height: 70dvh;
   }
@@ -648,9 +647,8 @@ nav a:hover {
 
   /* ========== SEÇÃO CONTADOR ========== */
 .counter-section {
-  background-color: #002244;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,52,0.7)),
-              url('https://ipworks.com.pt/wp-content/uploads/2014/04/banner.jpg') no-repeat center center;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,52,0.5)),
+              url('src/back_counter.jpg') no-repeat center center;
   background-size: cover;
   color: #fff;
   padding: 40px 20px;
