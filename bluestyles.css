@@ -217,10 +217,14 @@ header {
 }
 
 .service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  width: 250px;
+  width: 280px; /* largura um pouco maior para melhorar a leitura */
+  min-height: 400px; /* altura mínima padronizada */
   text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -233,8 +237,51 @@ header {
 
 .service img {
   width: 60px;
-  margin-bottom: 15px;
+  margin: 0 auto 15px auto; /* centraliza horizontalmente */
+  display: block;
 }
+
+
+.service h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.service h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #666;
+  font-weight: normal;
+}
+
+.service ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+  margin: 10px 0;
+  color: #444;
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+.saiba-mais-button {
+  margin-top: auto;
+  align-self: center;
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.saiba-mais-button:hover {
+  background-color: #0056b3;
+}
+
+
 
 /* ========== SOBRE / TIMELINE ========== */
 .about, .timeline {
@@ -587,6 +634,13 @@ nav a:hover {
   }
 }
 /* ========== FIM RESPONSIVIDADE CELULAR PEQUENO ========== */
+
+@media (max-width: 600px) {
+  .service {
+    width: 90%;
+    min-height: auto;
+  }
+}
 
 
   .footer {
