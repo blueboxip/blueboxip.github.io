@@ -645,3 +645,66 @@ nav a:hover {
   .footer-column a:hover {
     text-decoration: underline;
   }
+
+  /* ========== SEÇÃO CONTADOR ========== */
+.counter-section {
+  background-color: #002244;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,52,0.7)),
+              url('https://ipworks.com.pt/wp-content/uploads/2014/04/banner.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.counter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.counter-box {
+  flex: 1 1 200px;
+  max-width: 220px;
+  min-width: 150px;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #00aced;
+}
+
+.counter {
+  font-size: 1.5rem;
+  display: block;
+  margin: 10px 0;
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+  .counter-container {
+    gap: 20px;
+  }
+
+  .counter-box {
+    flex: 1 1 45%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .counter {
+    font-size: 1.2rem;
+  }
+}
