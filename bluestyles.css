@@ -482,7 +482,7 @@ nav a:hover {
 }
 
 .clients-section {
-    background: linear-gradient(rgba(170,212,250,0.7), rgba(170,212,250,0.7)), url('src/bbip_background.jpg') no-repeat center center / cover;
+    background: linear-gradient(rgba(170, 212, 250, 0.3), rgba(240, 248, 255, 0.5)), url('src/bbip_background.jpg') no-repeat center center / cover;
     padding: 90px 20px;
     min-height: 70dvh;
   }
@@ -645,7 +645,3 @@ nav a:hover {
   .footer-column a:hover {
     text-decoration: underline;
   }
-  
-
-  
-  
