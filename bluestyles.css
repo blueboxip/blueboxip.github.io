@@ -473,8 +473,65 @@ nav a:hover {
   }
 }
 
-/* ========== RESPONSIVO CELULAR PEQUENO ========== */
+
+.swiper-slide img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.clients-section {
+    background: linear-gradient(rgba(170,212,250,0.7), rgba(170,212,250,0.7)), url('src/bbip_background.jpg') no-repeat center center / cover;
+    padding: 90px 20px;
+    min-height: 70dvh;
+  }
+
+/* ========== RESPONSIVIDADE TABLET E CELULARES MÉDIOS ========== */
+@media (max-width: 768px) {
+  .clients-section {
+    padding: 60px 15px;
+    background-position: center top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .clients-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85); /* sobreposição suave */
+    z-index: 1;
+  }
+
+  .clients-section > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    margin: 10px 0;
+  }
+}
+
+/* ========== RESPONSIVIDADE CELULAR PEQUENO ========== */
 @media (max-width: 480px) {
+  .clients-section {
+    padding: 40px 10px;
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
     padding: 0 10px;
@@ -530,33 +587,8 @@ nav a:hover {
     font-size: 0.9rem;
   }
 }
+/* ========== FIM RESPONSIVIDADE CELULAR PEQUENO ========== */
 
-.swiper-slide img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.clients-section {
-    background: linear-gradient(rgba(170,212,250,0.7), rgba(170,212,250,0.7)), url('src/bbip_background.jpg') no-repeat center center / cover;
-    padding: 150px 20px;
-    min-height: 100dvh;
-  }
-
-  @media (max-width: 768px) {
-    .clients-section {
-      padding: 80px 15px;
-      background-position: center top;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .clients-section {
-      padding: 60px 10px;
-      background-position: top;
-    }
-  }
 
   .footer {
     background-color: #002244;
@@ -614,15 +646,6 @@ nav a:hover {
     text-decoration: underline;
   }
   
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-column {
-      margin: 10px 0;
-    }
-  }
+
   
   
