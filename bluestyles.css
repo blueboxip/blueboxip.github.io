@@ -235,12 +235,12 @@ header {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.service img {
-  width: 60px;
-  margin: 0 auto 15px auto; /* centraliza horizontalmente */
+.service .iconify {
+  width: 60px; /* Pode ser opcional, mas ajuda a manter a consistência */
+  font-size: 51px; /* Ajuste o tamanho do ícone */
+  margin: 0 auto 15px auto; /* Centraliza horizontalmente */
   display: block;
 }
-
 
 .service h3 {
   font-size: 18px;
@@ -273,7 +273,7 @@ header {
   color: white;
   text-decoration: none;
   border-radius: 30px;
-  font-weight: bold;
+  font-size: small;
   transition: background-color 0.3s ease;
 }
 
