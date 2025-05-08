@@ -432,8 +432,17 @@ nav {
   justify-content: space-between;
   align-items: center;
   gap: 60px;
-  padding: 0 40px;
-  width: 100%;
+  padding: 10px 20px;
+  width: 52%;
+  background: hsla(240, 6%, 20%, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid #2d2d2d;
+  border-radius: 0 0 12px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 2px;     /* espaço do topo */
+  right: 10px;   /* espaço da direita */
+  z-index: 10;
 }
 
 nav ul {
