@@ -726,6 +726,13 @@ nav a:hover {
   text-align: center;
 }
 
+.counter-box .iconify {
+  color: #61aff6; /* Aplica a cor ao ícone */
+  font-size: 40px; /* Mantém o tamanho do ícone */
+  margin: 0 auto 15px auto; /* Centraliza horizontalmente */
+  display: block;
+}
+
 .counter-container {
   display: flex;
   flex-wrap: wrap;
