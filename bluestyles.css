@@ -419,6 +419,11 @@ footer {
   width: 60%;
   height: auto;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.logo-wrapper:hover .logo-img {
+  transform: scale(1.15);
 }
 
 /* ========== DEMAIS HOVERS ========== */
@@ -434,9 +439,9 @@ nav {
   gap: 60px;
   padding: 10px 20px;
   width: 52%;
-  background: hsla(240, 6%, 20%, 0.75);
+  background: hsla(222, 50%, 25%, 0.6);
   backdrop-filter: blur(10px);
-  border: 1px solid #2d2d2d;
+  border: 1px solid rgba(100, 130, 180, 0.3);
   border-radius: 0 0 12px 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -464,8 +469,10 @@ nav a {
 
 nav a:hover {
   transform: scale(1.15);
-  color: #ffaa00;
+  color: #66ccff;
+  text-shadow: 0 0 8px rgba(102, 204, 255, 0.6);
 }
+
 
 /* ========== MENU TOGGLE ========== */
 .menu-toggle {
