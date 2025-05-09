@@ -75,7 +75,7 @@
     animation: fadeInUp 1s ease;
   }
   
-  .hero-content button {
+  .hero-button {
     background-color: #ffaa00;
     border: none;
     padding: 15px 30px;
@@ -86,7 +86,7 @@
     animation: fadeInUp 1.2s ease;
   }
   
-  .hero-content button:hover {
+  .hero-button:hover {
     background-color: #61aff6;
     transform: scale(1.05);
   }
@@ -296,8 +296,6 @@
   .saiba-mais-button:hover {
     background-color: #0056b3;
   }
-  
-  
   
   /* ========== SOBRE / TIMELINE ========== */
   .about, .timeline {
@@ -693,11 +691,6 @@
   .hero-content p {
     font-size: 1rem;
     padding: 0 15px;
-  }
-
-  .hero-content button {
-    padding: 12px 25px;
-    font-size: 0.9rem;
   }
 
   .intro-text h2,
