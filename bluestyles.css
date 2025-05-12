@@ -192,10 +192,11 @@
   
   /* ========== DIVISOR ========== */
   .divider-section {
-    background-color: #aad4fa;
-    padding: 60px 20px;
-    margin-top: 60px;
-  }
+  background: linear-gradient(135deg, #e0f7ff, #aad4fa);
+  padding: 60px 20px;
+  margin-top: 60px;
+}
+
   
   .divider-section h2 {
     text-align: center;
