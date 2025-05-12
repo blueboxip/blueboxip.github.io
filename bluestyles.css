@@ -212,7 +212,7 @@
     color: #444;
   }
   
-  /* ========== SERVIÇOS ========== */
+/* ========== SERVIÇOS ========== */
   .section {
     max-width: 1100px;
     margin: 60px auto;
@@ -243,19 +243,36 @@
     min-height: 400px; /* altura mínima padronizada */
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    color: #333; /* Cor padrão dos textos */
   }
   
   .service:hover {
+    background-color: #002244; /* fundo escurecido */
+    color: #82c0f8; /* textos mais claros */
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 20px rgba(0, 85, 170, 0.5);
   }
-  
+
+  /* Especificamente ajustar cor dos elementos internos ao passar o mouse */
+  .service:hover h3,
+  .service:hover h4,
+  .service:hover ul,
+  .service:hover ul li {
+   color: #aad4fa;
+  }
+
   .service .iconify {
     width: 60px; /* Pode ser opcional, mas ajuda a manter a consistência */
     font-size: 51px; /* Ajuste o tamanho do ícone */
     margin: 0 auto 15px auto; /* Centraliza horizontalmente */
     display: block;
+  }
+
+  /* Ícone */
+  .service:hover .iconify {
+  color: #f0f0f0;
+  transition: color 0.3s;
   }
   
   .service h3 {
