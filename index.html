@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
   <link rel="stylesheet" href="bluestyles.css">
+  <link rel="stylesheet" href="bbipmodais.css">
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
@@ -91,7 +92,7 @@
           <li>Coaxial</li>
           <li>UTP/Cobre</li>
         </ul>
-        <a href="#infraestrutura" class="saiba-mais-button">Saiba mais</a>
+        <a href="#infraestrutura" class="saiba-mais-button" data-modal="infra">Saiba mais</a>
       </div>
       
       <div class="service">
@@ -105,7 +106,7 @@
           <li>Organização</li>
           <li>Etiquetagem e Certificação</li>
         </ul>
-        <a href="#cabeamento" class="saiba-mais-button">Saiba mais</a>
+        <a href="#cabeamento" class="saiba-mais-button" data-modal="cabeamento">Saiba mais</a>
       </div>
       
       <div class="service">
@@ -117,7 +118,7 @@
           <li>Climatização e energia redundante</li>
           <li>Segurança física e lógica</li>
         </ul>
-        <a href="#datacenter" class="saiba-mais-button">Saiba mais</a>
+        <a href="#datacenter" class="saiba-mais-button" data-modal="datacenter">Saiba mais</a>
       </div>
 
       <div class="service">
@@ -129,7 +130,7 @@
           <li>Controle de acesso e VLANs</li>
           <li>Equipamentos empresariais</li>
         </ul>
-        <a href="#wifi" class="saiba-mais-button">Saiba mais</a>
+        <a href="#wifi" class="saiba-mais-button" data-modal="wifi">Saiba mais</a>
       </div>
 
       <div class="service">
@@ -141,7 +142,7 @@
           <li>Gravação local e em nuvem</li>
           <li>Integração com alarmes</li>
         </ul>
-        <a href="#cftv" class="saiba-mais-button">Saiba mais</a>
+        <a href="#cftv" class="saiba-mais-button" data-modal="cftv">Saiba mais</a>
       </div>
 
       <div class="service">
@@ -153,7 +154,7 @@
           <li>Recomendações sob medida</li>
           <li>Planejamento de evolução</li>
         </ul>
-        <a href="#consultoria" class="saiba-mais-button">Saiba mais</a>
+        <a href="#consultoria" class="saiba-mais-button" data-modal="consultoria">Saiba mais</a>
       </div>
 
       <div class="service">
@@ -165,7 +166,7 @@
           <li>Ramais internos e externos</li>
           <li>Integração com CRMs</li>
         </ul>
-        <a href="#telefonia" class="saiba-mais-button">Saiba mais</a>
+        <a href="#telefonia" class="saiba-mais-button" data-modal="telefonia">Saiba mais</a>
       </div>
 
       <div class="service">
@@ -177,7 +178,7 @@
           <li>Gestão de cronograma e riscos</li>
           <li>Relatórios e entregas claras</li>
         </ul>
-        <a href="#gestao" class="saiba-mais-button">Saiba mais</a>
+        <a href="#gestao" class="saiba-mais-button" data-modal="gestao">Saiba mais</a>
       </div>
 
       <div class="service">
@@ -189,7 +190,7 @@
           <li>Análise de fornecedores</li>
           <li>Compras com base técnica</li>
         </ul>
-        <a href="#procurement" class="saiba-mais-button">Saiba mais</a>
+        <a href="#procurement" class="saiba-mais-button" data-modal="procurement">Saiba mais</a>
       </div>
       
     </div>
@@ -362,6 +363,233 @@
   </div>
 </section>
 
+<!-- MODAIS -->
+<!-- Infraestrutura de Telecomunicações -->
+    <div class="popup" id="infra">
+      <div class="popup-container">
+        <div class="popup-header">
+          <div class="button-container">
+            <button class="close-btn circle-btn red">
+              <i class="fa fa-times"></i>
+            </button>
+            <button class="close-btn circle-btn yellow">
+              <i class="fa fa-window-minimize"></i>
+            </button>
+            <button class="maximize-btn circle-btn green">
+              <i class="fa fa-window-maximize"></i>
+            </button>
+          </div>
+        </div>
+        <div class="popup-body services-container">
+          <h1 style="color:#f3f707;">Infraestrutura de Telecomunicações</h1>
+          <p></p>
+ 
+        </div>
+      </div>
+    </div>
+  <!-- Fim do modal Infraestrutura de Telecomunicações -->
+
+  <!-- Cabeamento -->
+    <div class="popup" id="cabeamento">
+      <div class="popup-container">
+        <div class="popup-header">
+          <div class="button-container">
+            <button class="close-btn circle-btn red">
+              <i class="fa fa-times"></i>
+            </button>
+            <button class="close-btn circle-btn yellow">
+              <i class="fa fa-window-minimize"></i>
+            </button>
+            <button class="maximize-btn circle-btn green">
+              <i class="fa fa-window-maximize"></i>
+            </button>
+          </div>
+        </div>
+        <div class="popup-body services-container">
+          <h1>Cabeamento Estruturado</h1>
+          <p></p>
+
+        </div>
+      </div>
+    </div>
+  <!-- Fim do modal cabeamento -->
+
+    <!-- Datacenter -->
+    <div class="popup" id="datacenter">
+      <div class="popup-container">
+        <div class="popup-header">
+          <div class="button-container">
+            <button class="close-btn circle-btn red">
+              <i class="fa fa-times"></i>
+            </button>
+            <button class="close-btn circle-btn yellow">
+              <i class="fa fa-window-minimize"></i>
+            </button>
+            <button class="maximize-btn circle-btn green">
+              <i class="fa fa-window-maximize"></i>
+            </button>
+          </div>
+        </div>
+        <div class="popup-body services-container">
+          <h1>Datacenter</h1>
+          <p></p>
+
+        </div>
+      </div>
+    </div>
+  <!-- Fim do modal Datacenter -->
+
+  <!-- Wifi -->
+    <div class="popup" id="wifi">
+      <div class="popup-container">
+        <div class="popup-header">
+          <div class="button-container">
+            <button class="close-btn circle-btn red">
+              <i class="fa fa-times"></i>
+            </button>
+            <button class="close-btn circle-btn yellow">
+              <i class="fa fa-window-minimize"></i>
+            </button>
+            <button class="maximize-btn circle-btn green">
+              <i class="fa fa-window-maximize"></i>
+            </button>
+          </div>
+        </div>
+        <div class="popup-body services-container">
+          <h1>Wifi</h1>
+          <p></p>
+
+        </div>
+      </div>
+    </div>
+  <!-- Fim do modal Wifi -->
+  
+  <!-- CFTV -->
+    <div class="popup" id="cftv">
+      <div class="popup-container">
+        <div class="popup-header">
+          <div class="button-container">
+            <button class="close-btn circle-btn red">
+              <i class="fa fa-times"></i>
+            </button>
+            <button class="close-btn circle-btn yellow">
+              <i class="fa fa-window-minimize"></i>
+            </button>
+            <button class="maximize-btn circle-btn green">
+              <i class="fa fa-window-maximize"></i>
+            </button>
+          </div>
+        </div>
+        <div class="popup-body services-container">
+          <h1>CFTV</h1>
+          <p></p>
+
+        </div>
+      </div>
+    </div>
+  <!-- Fim do modal CFTV -->
+
+  <!-- Consultoria -->
+    <div class="popup" id="consultoria">
+      <div class="popup-container">
+        <div class="popup-header">
+          <div class="button-container">
+            <button class="close-btn circle-btn red">
+              <i class="fa fa-times"></i>
+            </button>
+            <button class="close-btn circle-btn yellow">
+              <i class="fa fa-window-minimize"></i>
+            </button>
+            <button class="maximize-btn circle-btn green">
+              <i class="fa fa-window-maximize"></i>
+            </button>
+          </div>
+        </div>
+        <div class="popup-body services-container">
+          <h1>Consultoria</h1>
+          <p></p>
+
+        </div>
+      </div>
+    </div>
+  <!-- Fim do modal Consultoria -->
+
+  <!-- Telefonia -->
+    <div class="popup" id="telefonia">
+      <div class="popup-container">
+        <div class="popup-header">
+          <div class="button-container">
+            <button class="close-btn circle-btn red">
+              <i class="fa fa-times"></i>
+            </button>
+            <button class="close-btn circle-btn yellow">
+              <i class="fa fa-window-minimize"></i>
+            </button>
+            <button class="maximize-btn circle-btn green">
+              <i class="fa fa-window-maximize"></i>
+            </button>
+          </div>
+        </div>
+        <div class="popup-body services-container">
+          <h1>Centrais Telefônicas</h1>
+          <p></p>
+
+        </div>
+      </div>
+    </div>
+  <!-- Fim do modal Telefonia -->
+
+  <!-- Gestão de Projetos -->
+    <div class="popup" id="gestao">
+      <div class="popup-container">
+        <div class="popup-header">
+          <div class="button-container">
+            <button class="close-btn circle-btn red">
+              <i class="fa fa-times"></i>
+            </button>
+            <button class="close-btn circle-btn yellow">
+              <i class="fa fa-window-minimize"></i>
+            </button>
+            <button class="maximize-btn circle-btn green">
+              <i class="fa fa-window-maximize"></i>
+            </button>
+          </div>
+        </div>
+        <div class="popup-body services-container">
+          <h1>Gestão de Projetos</h1>
+          <p></p>
+
+        </div>
+      </div>
+    </div>
+  <!-- Fim do modal Gestão de Projetos -->
+
+  <!-- Procurement Técnico -->
+    <div class="popup" id="procurement">
+      <div class="popup-container">
+        <div class="popup-header">
+          <div class="button-container">
+            <button class="close-btn circle-btn red">
+              <i class="fa fa-times"></i>
+            </button>
+            <button class="close-btn circle-btn yellow">
+              <i class="fa fa-window-minimize"></i>
+            </button>
+            <button class="maximize-btn circle-btn green">
+              <i class="fa fa-window-maximize"></i>
+            </button>
+          </div>
+        </div>
+        <div class="popup-body services-container">
+          <h1>Procurement Técnico</h1>
+          <p></p>
+
+        </div>
+      </div>
+    </div>
+  <!-- Fim do modal Procurement Técnico -->
+<!-- FIM DOS MODAIS -->
+
     <footer class="footer">
       <div class="footer-container">
         <!-- Coluna 1: Serviços -->
@@ -420,6 +648,7 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script src="bluescripts.js"></script>
+  <script src="bbip_js_modais.js"></script>
   <script>
     const swiper = new Swiper('.swiper', {
       slidesPerView: 3,
