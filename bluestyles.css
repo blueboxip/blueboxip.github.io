@@ -575,6 +575,8 @@
 .footer-column ul li a:hover,
 .footer-column a:hover {
   text-decoration: underline;
+  color: #66ccff;
+  text-shadow: 0 0 8px rgba(102, 204, 255, 0.6)
 }
 
 /* ========== RESPONSIVIDADE: TABLETS (≤768px) ========== */
