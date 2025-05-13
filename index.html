@@ -44,14 +44,28 @@
     </nav>
   </header>
 
-  <section class="hero" id="home">
-    <div id="particles-js"></div>
-    <div class="hero-content">
-      <h1>Especialistas em Infraestruturas de Telecomunicações</h1>
+  <section class="hero bg-ipworks" id="home">
+  <div id="particles-js"></div>
+  <div class="slider">
+    <!-- Slide 1 - IP Works -->
+    <div class="slide active">
+      <h1>Especialistas em Infraestruturas de Telecomunicações e Tecnologia</h1>
       <p>Oferecemos soluções completas e eficientes para sua empresa</p>
-      <button class="hero-button">Solicite um orçamento</button>
+      <!-- <button class="hero-button">Solicite um orçamento</button> -->
     </div>
-  </section>
+
+    <!-- Slide 2 - Parceria BlueBox -->
+    <div class="slide">
+      <a href="https://bluebox.pt" target="_blank" class="bluebox-logo-link">
+        <img src="https://bluebox.pt/wp-content/uploads/2021/03/355x100-300x85.png"
+            alt="Logo BlueBox Comunicações" class="bluebox-logo">
+      </a>
+      <h1><span style="color:#002c73;">Uma parceria inteligente</span></h1>
+      <p class="outlined-text">Impulsionando o futuro com tecnologia de ponta</p>
+      
+    </div>
+</section>
+
 
   <section class="intro-section">
     <div class="intro-text">
@@ -365,229 +379,737 @@
 
 <!-- MODAIS -->
 <!-- Infraestrutura de Telecomunicações -->
-    <div class="popup" id="infra">
-      <div class="popup-container">
-        <div class="popup-header">
-          <div class="button-container">
-            <button class="close-btn circle-btn red">
-              <i class="fa fa-times"></i>
-            </button>
-            <button class="close-btn circle-btn yellow">
-              <i class="fa fa-window-minimize"></i>
-            </button>
-            <button class="maximize-btn circle-btn green">
-              <i class="fa fa-window-maximize"></i>
-            </button>
-          </div>
-        </div>
-        <div class="popup-body services-container">
-          <h1 style="color:#f3f707;">Infraestrutura de Telecomunicações</h1>
-          <p></p>
- 
-        </div>
+<div class="popup" id="infra">
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="button-container">
+        <button class="close-btn circle-btn red">
+          <i class="fa fa-times"></i>
+        </button>
+        <button class="close-btn circle-btn yellow">
+          <i class="fa fa-window-minimize"></i>
+        </button>
+        <button class="maximize-btn circle-btn green">
+          <i class="fa fa-window-maximize"></i>
+        </button>
       </div>
     </div>
+
+    <div class="popup-body services-container">
+      <h1>Infraestrutura de Telecomunicações</h1>
+      <p>
+        Na <strong>BBIP</strong>, oferecemos soluções completas e em conformidade com as diretrizes do <strong>ITED 4</strong> para projetos de telecomunicações em edifícios. Garantimos desempenho, organização e durabilidade para redes modernas. Veja abaixo os serviços detalhados:
+      </p>
+
+      <!-- Seção: Fibra Óptica -->
+      <h2>Fibra Óptica</h2>
+      <div class="two-column-section">
+        <div class="column">
+          <p>
+            A fibra óptica é essencial para suportar altas velocidades e longas distâncias sem perda significativa de sinal. Na BBIP, realizamos:
+          </p>
+          <ul>
+            <li>Instalação de redes FTTH (Fiber to the Home)</li>
+            <li>Passagem em condutas subterrâneas</li>
+            <li>Conectorização e terminação em CTOs e caixas de emenda</li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="images/modais/fibraotica.jpg" alt="Fibra Óptica" style="width: 80%; border-radius: 8px;">
+        </div>
+      </div>
+
+      <!-- Seção: Fusões -->
+      <h2>Fusões de Fibra Óptica</h2>
+      <div class="two-column-section">
+        <div class="column">
+          <img src="images/modais/fusao.jpg" alt="Fusão de fibra óptica" style="width: 80%; border-radius: 8px;">
+        </div>
+        <div class="column">
+          <p>
+            Utilizando equipamentos de última geração, realizamos <strong>fusões por arco elétrico</strong>, assegurando:
+          </p>
+          <ul>
+            <li>Baixa atenuação</li>
+            <li>Conectividade segura</li>
+            <li>Documentação com OTDR e Power Meter</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Seção: Coaxial -->
+      <h2>Cabo Coaxial</h2>
+      <div class="two-column-section">
+        <div class="column">
+          <p>
+            Ainda presente em diversos edifícios para distribuição de TV, o cabo coaxial é instalado conforme normas ITED:
+          </p>
+          <ul>
+            <li>Distribuição em estrela com derivadores e splitters</li>
+            <li>Conectorização com plugs F e compressão</li>
+            <li>Compatibilidade com sistemas SMATV</li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="imagens/coaxial.jpg" alt="Instalação de cabo coaxial" style="width: 100%; border-radius: 8px;">
+        </div>
+      </div>
+
+      <!-- Seção: UTP/Cobre -->
+      <h2>Cabo UTP / Cobre</h2>
+      <div class="two-column-section">
+        <div class="column">
+          <img src="imagens/utp-cobre.jpg" alt="Cabeamento UTP" style="width: 100%; border-radius: 8px;">
+        </div>
+        <div class="column">
+          <p>
+            O cabeamento estruturado em <strong>cobre (UTP)</strong> é indispensável para redes locais (LANs):
+          </p>
+          <ul>
+            <li>Instalação de Cat. 6 ou superior</li>
+            <li>Pontos RJ45 identificados e testados</li>
+            <li>Organização em patch panels e racks</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Seção: Conformidade ITED -->
+      <h2>Conformidade com o ITED 4</h2>
+      <p>
+        Todos os nossos serviços seguem rigorosamente os princípios do <strong>ITED 4</strong>, que orienta a execução das infraestruturas de telecomunicações nos edifícios:
+      </p>
+      <ul>
+        <li>Planejamento e dimensionamento conforme o tipo de edifício (habitacional, comercial, misto)</li>
+        <li>Compatibilidade com operadoras de telecomunicação</li>
+        <li>Uso de materiais homologados e certificados</li>
+        <li>Relatórios técnicos e medições documentadas</li>
+      </ul>
+
+      <p>
+        Escolher a <strong>BBIP</strong> é garantir qualidade, conformidade técnica e um serviço à frente do tempo.
+      </p>
+    </div>
+  </div>
+</div>
+
+
   <!-- Fim do modal Infraestrutura de Telecomunicações -->
 
-  <!-- Cabeamento -->
-    <div class="popup" id="cabeamento">
-      <div class="popup-container">
-        <div class="popup-header">
-          <div class="button-container">
-            <button class="close-btn circle-btn red">
-              <i class="fa fa-times"></i>
-            </button>
-            <button class="close-btn circle-btn yellow">
-              <i class="fa fa-window-minimize"></i>
-            </button>
-            <button class="maximize-btn circle-btn green">
-              <i class="fa fa-window-maximize"></i>
-            </button>
-          </div>
-        </div>
-        <div class="popup-body services-container">
-          <h1>Cabeamento Estruturado</h1>
-          <p></p>
-
-        </div>
+  <!-- Modal: Cabeamento Estruturado -->
+<div class="popup" id="cabeamento">
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="button-container">
+        <button class="close-btn circle-btn red">
+          <i class="fa fa-times"></i>
+        </button>
+        <button class="close-btn circle-btn yellow">
+          <i class="fa fa-window-minimize"></i>
+        </button>
+        <button class="maximize-btn circle-btn green">
+          <i class="fa fa-window-maximize"></i>
+        </button>
       </div>
     </div>
-  <!-- Fim do modal cabeamento -->
 
-    <!-- Datacenter -->
-    <div class="popup" id="datacenter">
-      <div class="popup-container">
-        <div class="popup-header">
-          <div class="button-container">
-            <button class="close-btn circle-btn red">
-              <i class="fa fa-times"></i>
-            </button>
-            <button class="close-btn circle-btn yellow">
-              <i class="fa fa-window-minimize"></i>
-            </button>
-            <button class="maximize-btn circle-btn green">
-              <i class="fa fa-window-maximize"></i>
-            </button>
-          </div>
+    <div class="popup-body services-container">
+      <h1>Cabeamento Estruturado</h1>
+      <p>
+        A <strong>BBIP</strong> executa projetos e instalações de <strong>cabeamento estruturado</strong> com excelência, conforme as normas internacionais <strong>ANSI/TIA-568</strong> e <strong>ISO/IEC 11801</strong>. Nossas soluções são voltadas à eficiência, organização e performance de redes de dados, voz e vídeo.
+      </p>
+
+      <!-- Seção: Normas e Categorias -->
+      <h2>Normas e Categorias</h2>
+      <div class="two-column-section">
+        <div class="column">
+          <ul>
+            <li><strong>Categoria 5e</strong> – Aplicações até 100 MHz (básico)</li>
+            <li><strong>Categoria 6</strong> – Aplicações até 250 MHz (recomendado para novos projetos)</li>
+            <li><strong>Categoria 6A</strong> – Aplicações até 500 MHz (ideal para redes de 10 Gbps)</li>
+          </ul>
+          <p>
+            Trabalhamos exclusivamente com cabos e conectores certificados, garantindo desempenho e conformidade.
+          </p>
         </div>
-        <div class="popup-body services-container">
-          <h1>Datacenter</h1>
-          <p></p>
-
-        </div>
-      </div>
-    </div>
-  <!-- Fim do modal Datacenter -->
-
-  <!-- Wifi -->
-    <div class="popup" id="wifi">
-      <div class="popup-container">
-        <div class="popup-header">
-          <div class="button-container">
-            <button class="close-btn circle-btn red">
-              <i class="fa fa-times"></i>
-            </button>
-            <button class="close-btn circle-btn yellow">
-              <i class="fa fa-window-minimize"></i>
-            </button>
-            <button class="maximize-btn circle-btn green">
-              <i class="fa fa-window-maximize"></i>
-            </button>
-          </div>
-        </div>
-        <div class="popup-body services-container">
-          <h1>Wifi</h1>
-          <p></p>
-
+        <div class="column">
+          <img src="imagens/categorias-cabos.jpg" alt="Cabos de diferentes categorias" style="width: 100%; border-radius: 8px;">
         </div>
       </div>
+
+      <!-- Seção: Patch Panels e Racks -->
+      <h2>Patch Panels e Racks</h2>
+      <div class="two-column-section">
+        <div class="column">
+          <img src="imagens/patch-panel-rack.jpg" alt="Patch panel e rack organizado" style="width: 100%; border-radius: 8px;">
+        </div>
+        <div class="column">
+          <p>
+            Organizamos os cabos em <strong>racks padronizados</strong> com patch panels, switches, organizadores verticais e horizontais.
+          </p>
+          <ul>
+            <li>Facilidade de manutenção</li>
+            <li>Melhor ventilação</li>
+            <li>Segurança e estética profissional</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Seção: Conectorização e Organização -->
+      <h2>Conectorização e Organização</h2>
+      <div class="two-column-section">
+        <div class="column">
+          <p>
+            A <strong>conectorização</strong> é feita com ferramentas certificadas, garantindo baixa perda e alta durabilidade. Nossos instaladores seguem padrões de cor e polaridade para total compatibilidade.
+          </p>
+          <p>
+            Além disso, prezamos pela <strong>organização</strong> interna e externa dos cabos, com rotas bem definidas e identificações visuais.
+          </p>
+        </div>
+        <div class="column">
+          <img src="imagens/conectorizacao.jpg" alt="Técnico conectando cabos em keystone jack" style="width: 100%; border-radius: 8px;">
+        </div>
+      </div>
+
+      <!-- Seção: Etiquetagem e Certificação -->
+      <h2>Etiquetagem e Certificação</h2>
+      <div class="two-column-section">
+        <div class="column">
+          <img src="imagens/etiquetagem-certificacao.jpg" alt="Etiquetagem e equipamento de teste de rede" style="width: 100%; border-radius: 8px;">
+        </div>
+        <div class="column">
+          <p>
+            Todo cabeamento é <strong>etiquetado</strong> com padrão lógico, permitindo rastreamento fácil em manutenções. A certificação é feita com testadores de rede homologados, e os relatórios são entregues ao cliente.
+          </p>
+          <ul>
+            <li>Mapeamento por ambiente ou setor</li>
+            <li>Testes de continuidade, atenuação e NEXT</li>
+            <li>Entrega de documentação digital</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>
+        Com a <strong>BBIP</strong>, você tem a garantia de um sistema de cabeamento confiável, modular e pronto para o futuro.
+      </p>
     </div>
-  <!-- Fim do modal Wifi -->
+  </div>
+</div>
+<!-- Fim do Modal Cabeamento-->
+
+
+<!-- Datacenter -->
+<div class="popup" id="datacenter">
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="button-container">
+        <button class="close-btn circle-btn red">
+          <i class="fa fa-times"></i>
+        </button>
+        <button class="close-btn circle-btn yellow">
+          <i class="fa fa-window-minimize"></i>
+        </button>
+        <button class="maximize-btn circle-btn green">
+          <i class="fa fa-window-maximize"></i>
+        </button>
+      </div>
+    </div>
+    <div class="popup-body services-container">
+      <h1>Datacenter</h1>
+      <h3>Infraestrutura | Alta Disponibilidade</h3>
+      <p>
+        Oferecemos ambientes preparados para garantir o máximo desempenho e segurança na hospedagem de dados e sistemas, com foco em continuidade de negócios, escalabilidade e redundância total.
+      </p>
+
+      <div class="two-column-section">
+        <div class="column">
+          <h4>Servidores Dedicados e Virtuais</h4>
+          <ul>
+            <li>Hospedagem de aplicações críticas</li>
+            <li>Virtualização com VMWare, Proxmox e Hyper-V</li>
+            <li>Backup automatizado e restore seguro</li>
+            <li>Monitoramento 24x7</li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1581090700227-1e8a3cba46b2?auto=format&fit=crop&w=800&q=80" alt="Servidor em rack com luzes LED">
+        </div>
+      </div>
+
+      <div class="two-column-section">
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1600467070925-66d8f31d9b58?auto=format&fit=crop&w=800&q=80" alt="Sistema de climatização do datacenter">
+        </div>
+        <div class="column">
+          <h4>Climatização e Energia Redundante</h4>
+          <ul>
+            <li>Ar-condicionado de precisão e controle de umidade</li>
+            <li>No-breaks em paralelo com banco de baterias</li>
+            <li>Gerador de emergência com transferência automática</li>
+            <li>Ambientes com sensores de temperatura e fumaça</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="two-column-section">
+        <div class="column">
+          <h4>Segurança Física e Lógica</h4>
+          <ul>
+            <li>Circuito fechado de TV (CFTV) 24h</li>
+            <li>Controle de acesso com biometria</li>
+            <li>Firewalls físicos e virtuais</li>
+            <li>Políticas de backup e isolamento de rede</li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1614064641938-58e370920d7b?auto=format&fit=crop&w=800&q=80" alt="Datacenter com segurança biométrica">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Fim do modal Datacenter -->
+
+<!-- Redes Wi-Fi Corporativas -->
+<div class="popup" id="wifi">
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="button-container">
+        <button class="close-btn circle-btn red">
+          <i class="fa fa-times"></i>
+        </button>
+        <button class="close-btn circle-btn yellow">
+          <i class="fa fa-window-minimize"></i>
+        </button>
+        <button class="maximize-btn circle-btn green">
+          <i class="fa fa-window-maximize"></i>
+        </button>
+      </div>
+    </div>
+    <div class="popup-body services-container">
+      <h1>Redes Wi-Fi Corporativas</h1>
+      <h3>Conectividade | Alta Performance</h3>
+      <p>
+        Projetamos redes Wi-Fi corporativas de alto desempenho, priorizando estabilidade, cobertura total e segurança no acesso. Nossos projetos são pensados para ambientes empresariais exigentes e de alta densidade de usuários.
+      </p>
+
+      <div class="two-column-section">
+        <div class="column">
+          <h4>Planejamento de Cobertura</h4>
+          <ul>
+            <li>Estudo de site survey e zonas de sombra</li>
+            <li>Dimensionamento de APs por densidade de usuários</li>
+            <li>Roaming sem interrupções</li>
+            <li>Mapeamento por plantas e setores</li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1639753581263-dba917d4fc3f?auto=format&fit=crop&w=800&q=80" alt="Mapa de calor Wi-Fi empresarial">
+        </div>
+      </div>
+
+      <div class="two-column-section">
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc37?auto=format&fit=crop&w=800&q=80" alt="Painel de controle de rede corporativa">
+        </div>
+        <div class="column">
+          <h4>Controle de Acesso e VLANs</h4>
+          <ul>
+            <li>Segmentação de rede por departamento</li>
+            <li>SSID distintos para colaboradores, visitantes e IoT</li>
+            <li>Autenticação via RADIUS, captive portal e Active Directory</li>
+            <li>Logs e auditorias de acesso</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="two-column-section">
+        <div class="column">
+          <h4>Equipamentos Empresariais</h4>
+          <ul>
+            <li>Access Points Wi-Fi 5/6/6E de alto desempenho</li>
+            <li>Controladoras físicas ou em nuvem (UniFi, Aruba, Cisco)</li>
+            <li>Instalação em teto, parede ou ambientes externos</li>
+            <li>Gerenciamento remoto e atualizações OTA</li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1581093588401-13c83333c1f7?auto=format&fit=crop&w=800&q=80" alt="Access point profissional instalado no teto">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Fim do modal Redes Wi-Fi Corporativas -->
+
   
-  <!-- CFTV -->
-    <div class="popup" id="cftv">
-      <div class="popup-container">
-        <div class="popup-header">
-          <div class="button-container">
-            <button class="close-btn circle-btn red">
-              <i class="fa fa-times"></i>
-            </button>
-            <button class="close-btn circle-btn yellow">
-              <i class="fa fa-window-minimize"></i>
-            </button>
-            <button class="maximize-btn circle-btn green">
-              <i class="fa fa-window-maximize"></i>
-            </button>
-          </div>
-        </div>
-        <div class="popup-body services-container">
-          <h1>CFTV</h1>
-          <p></p>
-
-        </div>
+<!-- CFTV -->
+<div class="popup" id="cftv">
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="button-container">
+        <button class="close-btn circle-btn red">
+          <i class="fa fa-times"></i>
+        </button>
+        <button class="close-btn circle-btn yellow">
+          <i class="fa fa-window-minimize"></i>
+        </button>
+        <button class="maximize-btn circle-btn green">
+          <i class="fa fa-window-maximize"></i>
+        </button>
       </div>
     </div>
-  <!-- Fim do modal CFTV -->
+    <div class="popup-body services-container">
+      <h1>CFTV</h1>
+      <h3>Monitoramento | Segurança Ativa</h3>
+      <p>
+        Implantamos sistemas de monitoramento de vídeo personalizados para empresas, com foco em vigilância contínua, qualidade de imagem, integração e acesso remoto. Soluções escaláveis para diversos portes e finalidades.
+      </p>
 
-  <!-- Consultoria -->
-    <div class="popup" id="consultoria">
-      <div class="popup-container">
-        <div class="popup-header">
-          <div class="button-container">
-            <button class="close-btn circle-btn red">
-              <i class="fa fa-times"></i>
-            </button>
-            <button class="close-btn circle-btn yellow">
-              <i class="fa fa-window-minimize"></i>
-            </button>
-            <button class="maximize-btn circle-btn green">
-              <i class="fa fa-window-maximize"></i>
-            </button>
-          </div>
+      <div class="two-column-section">
+        <div class="column">
+          <h4>Câmeras IP e Analógicas</h4>
+          <ul>
+            <li>Equipamentos HD, Full HD, 4K com infravermelho</li>
+            <li>Instalação com cabeamento estruturado ou via rede</li>
+            <li>Câmeras dome, bullet, speed dome e fisheye</li>
+            <li>Soluções híbridas (AHD, HDCVI, HDTVI)</li>
+          </ul>
         </div>
-        <div class="popup-body services-container">
-          <h1>Consultoria</h1>
-          <p></p>
-
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1612434284484-59dbef8c474b?auto=format&fit=crop&w=800&q=80" alt="Câmera de segurança instalada no teto">
         </div>
       </div>
-    </div>
-  <!-- Fim do modal Consultoria -->
 
-  <!-- Telefonia -->
-    <div class="popup" id="telefonia">
-      <div class="popup-container">
-        <div class="popup-header">
-          <div class="button-container">
-            <button class="close-btn circle-btn red">
-              <i class="fa fa-times"></i>
-            </button>
-            <button class="close-btn circle-btn yellow">
-              <i class="fa fa-window-minimize"></i>
-            </button>
-            <button class="maximize-btn circle-btn green">
-              <i class="fa fa-window-maximize"></i>
-            </button>
-          </div>
+      <div class="two-column-section">
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1628688064089-682b8d8ea218?auto=format&fit=crop&w=800&q=80" alt="Tela de monitoramento de câmeras de segurança">
         </div>
-        <div class="popup-body services-container">
-          <h1>Centrais Telefônicas</h1>
-          <p></p>
-
+        <div class="column">
+          <h4>Gravação Local e em Nuvem</h4>
+          <ul>
+            <li>Gravação em DVR/NVR com armazenamento redundante</li>
+            <li>Acesso remoto por aplicativo ou navegador</li>
+            <li>Armazenamento em nuvem com criptografia</li>
+            <li>Alertas e notificações inteligentes</li>
+          </ul>
         </div>
       </div>
-    </div>
-  <!-- Fim do modal Telefonia -->
 
-  <!-- Gestão de Projetos -->
-    <div class="popup" id="gestao">
-      <div class="popup-container">
-        <div class="popup-header">
-          <div class="button-container">
-            <button class="close-btn circle-btn red">
-              <i class="fa fa-times"></i>
-            </button>
-            <button class="close-btn circle-btn yellow">
-              <i class="fa fa-window-minimize"></i>
-            </button>
-            <button class="maximize-btn circle-btn green">
-              <i class="fa fa-window-maximize"></i>
-            </button>
-          </div>
+      <div class="two-column-section">
+        <div class="column">
+          <h4>Integração com Alarmes</h4>
+          <ul>
+            <li>Detecção de movimento integrada a sirenes</li>
+            <li>Acionamento de gravação por sensores de presença</li>
+            <li>Automatização de eventos com I/O</li>
+            <li>Compatibilidade com sistemas de alarme e controle de acesso</li>
+          </ul>
         </div>
-        <div class="popup-body services-container">
-          <h1>Gestão de Projetos</h1>
-          <p></p>
-
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1597775946581-7e1db03efba2?auto=format&fit=crop&w=800&q=80" alt="Sistema de alarme integrado ao CFTV">
         </div>
       </div>
+
     </div>
-  <!-- Fim do modal Gestão de Projetos -->
+  </div>
+</div>
+<!-- Fim do modal CFTV -->
 
-  <!-- Procurement Técnico -->
-    <div class="popup" id="procurement">
-      <div class="popup-container">
-        <div class="popup-header">
-          <div class="button-container">
-            <button class="close-btn circle-btn red">
-              <i class="fa fa-times"></i>
-            </button>
-            <button class="close-btn circle-btn yellow">
-              <i class="fa fa-window-minimize"></i>
-            </button>
-            <button class="maximize-btn circle-btn green">
-              <i class="fa fa-window-maximize"></i>
-            </button>
-          </div>
-        </div>
-        <div class="popup-body services-container">
-          <h1>Procurement Técnico</h1>
-          <p></p>
-
-        </div>
+<!-- Consultoria -->
+<div class="popup" id="consultoria">
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="button-container">
+        <button class="close-btn circle-btn red">
+          <i class="fa fa-times"></i>
+        </button>
+        <button class="close-btn circle-btn yellow">
+          <i class="fa fa-window-minimize"></i>
+        </button>
+        <button class="maximize-btn circle-btn green">
+          <i class="fa fa-window-maximize"></i>
+        </button>
       </div>
     </div>
-  <!-- Fim do modal Procurement Técnico -->
+    <div class="popup-body services-container">
+      <h1>Consultoria</h1>
+      <h3>Estratégia | Diagnóstico Técnico</h3>
+      <p>
+        Atuamos como parceiros estratégicos, oferecendo diagnósticos precisos da infraestrutura tecnológica da sua empresa. Nosso foco é transformar problemas técnicos em oportunidades de evolução, com recomendações viáveis e orientadas para resultados.
+      </p>
+
+      <div class="two-column-section">
+        <div class="column">
+          <h4>Avaliação de Infraestrutura</h4>
+          <ul>
+            <li>Mapeamento detalhado de ativos de rede e TI</li>
+            <li>Identificação de pontos críticos e gargalos</li>
+            <li>Verificação de conformidade com normas e boas práticas</li>
+            <li>Levantamento de riscos operacionais e de segurança</li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d4?auto=format&fit=crop&w=800&q=80" alt="Equipe de consultoria avaliando infraestrutura de TI">
+        </div>
+      </div>
+
+      <div class="two-column-section">
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1633158829585-c6b6ffde3bcb?auto=format&fit=crop&w=800&q=80" alt="Consultor técnico apresentando relatório estratégico">
+        </div>
+        <div class="column">
+          <h4>Recomendações Sob Medida</h4>
+          <ul>
+            <li>Relatórios técnicos personalizados</li>
+            <li>Soluções alinhadas aos objetivos de negócio</li>
+            <li>Orçamento escalável e aderente à realidade da empresa</li>
+            <li>Priorização com base em impacto e viabilidade</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="two-column-section">
+        <div class="column">
+          <h4>Planejamento de Evolução</h4>
+          <ul>
+            <li>Roadmap de curto, médio e longo prazo</li>
+            <li>Plano de ação com metas técnicas e estratégicas</li>
+            <li>Acompanhamento e suporte na execução</li>
+            <li>Visão de crescimento sustentável em TI</li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1556742400-b5c1abec75a2?auto=format&fit=crop&w=800&q=80" alt="Planejamento estratégico com gráficos e metas">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Fim do modal Consultoria -->
+
+<!-- Centrais Telefônicas -->
+<div class="popup" id="telefonia">
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="button-container">
+        <button class="close-btn circle-btn red">
+          <i class="fa fa-times"></i>
+        </button>
+        <button class="close-btn circle-btn yellow">
+          <i class="fa fa-window-minimize"></i>
+        </button>
+        <button class="maximize-btn circle-btn green">
+          <i class="fa fa-window-maximize"></i>
+        </button>
+      </div>
+    </div>
+    <div class="popup-body services-container">
+      <h1>Centrais Telefônicas</h1>
+      <h3>VOIP | Telefonia Empresarial</h3>
+      <p>
+        Oferecemos soluções completas de telefonia IP para ambientes corporativos, com foco em flexibilidade, redução de custos e integração com sistemas empresariais. Nossas centrais telefônicas são projetadas para escalar conforme o crescimento do negócio.
+      </p>
+
+      <div class="two-column-section">
+        <div class="column">
+          <h4>Instalação de PABX IP</h4>
+          <ul>
+            <li>Servidores IP-PBX físicos ou em nuvem</li>
+            <li>Configuração de troncos SIP e operadoras VOIP</li>
+            <li>Softphones, telefones IP e gateways analógicos</li>
+            <li>Redução de custos com chamadas internas e externas</li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1581092160618-308a4be80b6e?auto=format&fit=crop&w=800&q=80" alt="Servidor de telefonia IP em rack">
+        </div>
+      </div>
+
+      <div class="two-column-section">
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1599050752960-8910e4ffea2c?auto=format&fit=crop&w=800&q=80" alt="Painel de ramais telefônicos em uso">
+        </div>
+        <div class="column">
+          <h4>Ramais Internos e Externos</h4>
+          <ul>
+            <li>Criação de ramais para todos os setores</li>
+            <li>Encaminhamento automático e grupos de atendimento</li>
+            <li>URA (atendimento automático personalizado)</li>
+            <li>Chamadas entre unidades com custo zero</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="two-column-section">
+        <div class="column">
+          <h4>Integração com CRMs</h4>
+          <ul>
+            <li>Integração com plataformas como HubSpot, Zoho, Odoo e outros</li>
+            <li>Click-to-call direto do navegador ou sistema</li>
+            <li>Registro de chamadas e gravações atreladas ao cliente</li>
+            <li>Melhoria no atendimento e produtividade das equipes</li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1581093588401-13c83333c1f7?auto=format&fit=crop&w=800&q=80" alt="Tela de CRM integrada à central telefônica">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Fim do modal Centrais Telefônicas -->
+
+<!-- Gestão de Projetos -->
+<div class="popup" id="gestao">
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="button-container">
+        <button class="close-btn circle-btn red">
+          <i class="fa fa-times"></i>
+        </button>
+        <button class="close-btn circle-btn yellow">
+          <i class="fa fa-window-minimize"></i>
+        </button>
+        <button class="maximize-btn circle-btn green">
+          <i class="fa fa-window-maximize"></i>
+        </button>
+      </div>
+    </div>
+    <div class="popup-body services-container">
+      <h1>Gestão de Projetos</h1>
+      <h3>Planejamento | Execução Técnica</h3>
+      <p>
+        A BBIP atua com excelência na gestão de projetos de tecnologia, combinando metodologias ágeis e tradicionais para garantir eficiência, controle e entregas alinhadas aos objetivos do cliente. Gerimos prazos, riscos e recursos com foco técnico e estratégico.
+      </p>
+
+      <div class="two-column-section">
+        <div class="column">
+          <h4>Metodologia Ágil e Tradicional</h4>
+          <ul>
+            <li>SCRUM, Kanban e PMBOK aplicados conforme o projeto</li>
+            <li>Definição clara de escopo, marcos e entregáveis</li>
+            <li>Daily meetings, Sprints e reuniões de alinhamento</li>
+            <li>Documentação padronizada e atualizada</li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1581091012184-7e0cdfbb6791?auto=format&fit=crop&w=800&q=80" alt="Gestor com quadro SCRUM e fluxos de tarefas">
+        </div>
+      </div>
+
+      <div class="two-column-section">
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80" alt="Gráfico de cronograma de projeto em tela de monitor">
+        </div>
+        <div class="column">
+          <h4>Gestão de Cronograma e Riscos</h4>
+          <ul>
+            <li>Uso de ferramentas como MS Project, Trello e Jira</li>
+            <li>Identificação e mitigação de riscos técnicos e operacionais</li>
+            <li>Monitoramento contínuo de prazos e dependências</li>
+            <li>Ajustes táticos com base em métricas de desempenho</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="two-column-section">
+        <div class="column">
+          <h4>Relatórios e Entregas Claras</h4>
+          <ul>
+            <li>Dashboards de progresso e KPIs atualizados</li>
+            <li>Checkpoints periódicos com o cliente</li>
+            <li>Documentação de entregas técnicas</li>
+            <li>Transparência total durante todo o ciclo do projeto</li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1643044821165-3280e8d10b9c?auto=format&fit=crop&w=800&q=80" alt="Dashboard de relatório de projeto e status de entrega">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Fim do modal Gestão de Projetos -->
+
+
+<!-- Procurement Técnico -->
+<div class="popup" id="procurement">
+  <div class="popup-container">
+    <div class="popup-header">
+      <div class="button-container">
+        <button class="close-btn circle-btn red">
+          <i class="fa fa-times"></i>
+        </button>
+        <button class="close-btn circle-btn yellow">
+          <i class="fa fa-window-minimize"></i>
+        </button>
+        <button class="maximize-btn circle-btn green">
+          <i class="fa fa-window-maximize"></i>
+        </button>
+      </div>
+    </div>
+    <div class="popup-body services-container">
+      <h1>Procurement Técnico</h1>
+      <h3>Aquisição | Eficiência | Conformidade</h3>
+      <p>
+        A BBIP oferece serviços de procurement técnico com foco em excelência operacional, compliance e custo-benefício. Realizamos a aquisição de equipamentos e soluções com base em especificações técnicas rigorosas, garantindo qualidade e aderência aos objetivos do projeto.
+      </p>
+
+      <div class="two-column-section">
+        <div class="column">
+          <h4>Especificação de Equipamentos</h4>
+          <ul>
+            <li>Definição técnica detalhada dos requisitos</li>
+            <li>Compatibilidade com infraestrutura existente</li>
+            <li>Adequação ao orçamento e escopo funcional</li>
+            <li>Requisitos de certificação, durabilidade e suporte</li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1581093928621-45d6d4b4144c?auto=format&fit=crop&w=800&q=80" alt="Planilha técnica com especificação de equipamentos">
+        </div>
+      </div>
+
+      <div class="two-column-section">
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?auto=format&fit=crop&w=800&q=80" alt="Análise comparativa de fornecedores em tela de computador">
+        </div>
+        <div class="column">
+          <h4>Análise de Fornecedores</h4>
+          <ul>
+            <li>Comparativos de qualidade, prazo e preço</li>
+            <li>Verificação de certificações e histórico técnico</li>
+            <li>Avaliação de SLA e suporte pós-venda</li>
+            <li>Gestão de cotações com critérios técnicos</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="two-column-section">
+        <div class="column">
+          <h4>Compras com Base Técnica</h4>
+          <ul>
+            <li>Processos de aquisição com critérios objetivos</li>
+            <li>Padronização e rastreabilidade documental</li>
+            <li>Suporte técnico em negociações estratégicas</li>
+            <li>Garantia de compliance e transparência</li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="https://images.unsplash.com/photo-1560264280-88b68371db39?auto=format&fit=crop&w=800&q=80" alt="Equipe realizando compra técnica com documentos e computadores">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Fim do modal Procurement Técnico -->
+
 <!-- FIM DOS MODAIS -->
 
     <footer class="footer">
@@ -674,5 +1196,27 @@
     });
   </script>
   
+  <script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+  const heroSection = document.querySelector(".hero");
+
+  const backgrounds = ["bg-ipworks", "bg-bluebox"];
+
+  setInterval(() => {
+    // Remove classe do slide atual
+    slides[currentSlide].classList.remove("active");
+    heroSection.classList.remove(backgrounds[currentSlide]);
+
+    // Atualiza índice do slide
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    // Adiciona classe ao novo slide
+    slides[currentSlide].classList.add("active");
+    heroSection.classList.add(backgrounds[currentSlide]);
+  }, 6000); // troca a cada 6 segundos
+</script>
+
+
 </body>
 </html>

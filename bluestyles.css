@@ -34,15 +34,24 @@
   
   /* ========== HERO SECTION ========== */
   .hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url('https://ipworks.com.pt/wp-content/uploads/2014/04/banner.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    overflow: hidden;
-  }
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  transition: background-image 1s ease-in-out;
+}
+.hero.bg-ipworks {
+  background: url('https://ipworks.com.pt/wp-content/uploads/2014/04/banner.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.hero.bg-bluebox {
+  background: url('https://www.meo.pt/PublishingImages/paginas/pacotes/m4-com-2-cartoes-20gb-fundo-azul-meo-slideshow-xl.webp') no-repeat center center fixed;
+  background-size: cover;
+}
+
   
   #particles-js {
     position: absolute;
@@ -90,6 +99,24 @@
     background-color: #61aff6;
     transform: scale(1.05);
   }
+
+.bluebox-logo-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.bluebox-logo {
+  width: 350px;
+  max-width: 80%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.bluebox-logo:hover {
+  transform: scale(1.05);
+}
   
   @keyframes fadeInDown {
     from { opacity: 0; transform: translateY(-20px); }
@@ -101,6 +128,61 @@
     to { opacity: 1; transform: translateY(0); }
   }
   
+  .slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 1s ease, transform 1s ease;
+  padding: 0 20px;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease;
+}
+
+.slide p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease;
+}
+
+.slide .hero-button {
+  background-color: #ffaa00;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: background 0.3s, transform 0.3s ease;
+  animation: fadeInUp 1.2s ease;
+}
+
+.slide .hero-button:hover {
+  background-color: #61aff6;
+  transform: scale(1.05);
+}
+
   /* ========== BOTÃO CURRÍCULO ========== */
   .btn-curriculo {
     display: inline-block;
@@ -189,6 +271,16 @@
     max-width: 500px;
     border-radius: 10px;
   }
+
+  .outlined-text {
+  color: white; /* ou a cor que preferir */
+  font-weight: bold;
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
   
   /* ========== DIVISOR ========== */
   .divider-section {
