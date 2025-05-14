@@ -341,7 +341,7 @@
   }
   
   .service:hover {
-    background-color: #002244; /* fundo escurecido */
+    background: linear-gradient(to bottom, #6699ff 0%, #002244 40%, #002244 100%);
     color: #82c0f8; /* textos mais claros */
     transform: translateY(-5px);
     box-shadow: 0 5px 20px rgba(0, 85, 170, 0.5);
