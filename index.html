@@ -78,7 +78,30 @@
 
   <section class="divider-section">
     <h2>Somos comprometidos com a Inovação</h2>
-    <p>Inovar é um dos nossos príncípios, é o nosso compromisso com o futuro, por isso, procuramos sempre antecipar tendências e entregar soluções que fazem a diferença, oferecendo uma experiência diferenciada e resultados que impactam positivamente nossos clientes.</p>
+    <!-- Parágrafo com ID para a animação -->
+<p id="typed" class="texto_animado"></p>
+
+<!-- Script da biblioteca Typed.js (Biblioteca que possibilita a animação de digitação) -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Script para animação de digitação -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var options = {
+          strings: [
+            `Inovar é um dos nossos princípios, é o nosso <span style="color:#005ef7;">compromisso com o futuro,</span> por isso, procuramos sempre antecipar tendências e entregar soluções que fazem a diferença, oferecendo uma experiência diferenciada e resultados que impactam positivamente nossos clientes.`
+          ],
+          typeSpeed: 50,
+          backSpeed: 30,
+          backDelay: 1500,
+          loop: true,
+          showCursor: false,
+        };
+
+        new Typed("#typed", options);
+      });
+    </script>
+
   </section>
 
   <section class="intro-section" id="sobre" style="scroll-margin-top: 100px;">
